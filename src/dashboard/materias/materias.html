@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materias</title>
+    <link rel="stylesheet" href="/css/minireset.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+  </head>
+  <body>
+    <!-- Menu de navegacion -->
+    <aside class="side-menu">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Usuarios</a></li>
+        <!-- Alumnos -->
+        <li><a href="#">Materias</a></li>
+        <!-- Profesores, Cordinadores -->
+        <li><a href="#">Alumnos</a></li>
+        <li><a href="#">Grupos</a></li>
+      </ul>
+    </aside>
+    <nav class="top-menu">
+      <li><a href="#">Dashboard</a></li>
+      <li>
+        <a href="#">Username <i class="user"></i></a>
+      </li>
+      <ul>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#"> --- </a></li>
+        <li><a href="#">Salir</a></li>
+      </ul>
+    </nav>
+    <a href="materias.html">Inicio</a>
+    |
+    <a href="Asignarmaterias.html">Asignarmaterias</a>
+    |
+    <a href="Eliminarmaterias.html">Eliminarmaterias</a>
+    <main class="container">
+      <label for="malla">Malla curricular de materias por: </label><br>
+      <select id="malla" name="malla"> 
+          <option value="grados">Grados</option>             
+          <option value="grupo">Grupo</option>
+          <option value="profesor">Profesor</option> selected="true">Grados</option>
+      </select><br><br>
+      <label for="guias">Guias didacticas por materia : </label><br>
+      <select id="guias" name="guias"> 
+          <option value="docente 6°">Docente 6°</option>             
+          <option value="docente 7°">Docente 7°</option> 
+          <option value="docente 8°">Docente 8°</option> 
+          <option value="docente 9°">Docente 9°</option> 
+          <option value="docente 10°">Docente 10°</option> 
+          <option value="docente 11°">Docente 11°</option> selected="true">Docente 6°</option>
+      </select><br><br>
+    </main>
+    <footer class="footer">
+      <p>Copyright &copy; 2021 - SysEducativo</p>
+    </footer>
+
+    <script src="/js/global.js"></script>
+  </body>
+</html>

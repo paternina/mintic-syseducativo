@@ -1,0 +1,48 @@
+
+ACTA NUMERO 2
+
+El día domingo 12 de Septiembre en la web Google Meet bajo la URL  https://meet.google.com/kwh-yzzu-pnd se dieron cita a las 9 AM los 
+integranes del grupo 3 de SCRUM, respondiendo a lista todos los integrantes del grupo, siendo estos:
+
+Roberto Paternina			
+Carlos Echeverri			
+Luis Eduardo León Jaime		
+Arturo Dominguez Tello		
+Jorge Enrique González 		
+
+De los cuales contestaron todos al llamado a lista, y como puntos a desarrollar se acordo:
+
+1. Cofigurar e ingresar al repositorio GitHub de forma colaborativa a cada uno de los integrantes del grupo.
+2. Delimitar el alcance del proyecto.
+3. Varios
+
+Se sometio a consideración el orden del día, el cual fue aprobado unanimemente, procediendo inmediatamente a su desarrollo sin comentarios.
+
+PUNTO UNO: El compañero Roberto Paternina realizo una explicacion exaustiva sobre la forma de realizar la conexion de cada uno al repositorio, y 
+de la misma forma como realizar los diferentes comandos para administrar el repositorio como git log, git branch, git commmit, y se realizo
+una grabación de esta actividad la cual se subio al drive de Google.
+
+PUNTO DOS: Punto seguido se entro a tratar el alcance del proyecto para lo cual se fijo trabajar sobre los siguientes modulos:
+
+Ingreso de alumno por materia
+Ingreso de notas
+Ingreso de profesores por curso
+
+A continuación se debatio sobre que forma abordar el analisis funcional del proyecto, si se utilizaba historias de usuario o  casos de uso, y 
+se acordo usar casos de uso, para lo cual en forma inicial se decidio dividir por actores los casos de uso para su analisis inicial, quedando 
+de la siguiente forma:
+
+Carlos Alberto	 				Funcionalidades del Coordinador
+Jorge Enrique González			Funcionalidades de los padres de familia
+Roberto Paternina				Funcionalidades del Administrador del sistema
+Luis Eduardo León Jaime			Funcionalidades del profesor
+Arturo Dominguez Tello			Funcionalidades de los alumnos
+
+Se determino que cada uno realizara los casos de uso de cada uno de los actores.
+
+La siguiente reunión quedo acordada para el día Lunes 13 a las 8 y 30 pm.
+
+Firmado y Revisado por 	ARTURO DOMINGUEZ TELLO
+
+
+

@@ -1,0 +1,35 @@
+
+ACTA NUMERO 1
+
+El día sabado 11 de Septiembre en la web Google Meet bajo la URL  https://meet.google.com/tmw-fmtk-acx se dieron cita a las 3 PM los 
+integranes del grupo 3 de SCRUM, respondiendo a lista todos los integrantes del grupo, siendo estos:
+
+Roberto Paternina			
+Carlos Echeverri			
+Luis Eduardo León Jaime		
+Arturo Dominguez Tello		
+Jorge Enrique González 		
+
+De los cuales contestaron todos al llamado a lista, y como puntos a desarrollar se acordo:
+
+1. Elegir el tipo de proyecto y nombre a desarrollar.
+2. Crear un GitHub, el cual almacenara tanto el proyecto como los documentos soporte y documentación del proyecto.
+3. Varios
+
+Se sometio a consideración el orden del día, el cual fue aprobado unanimemente, procediendo inmediatamente a su desarrollo sin comentarios.
+
+PUNTO UNO: En desaroLlo del punto se realizo una lluvia de ideas sobre que tipo de PROYECTO a realizar, quedando sobre la mesa los 
+siguientes prototipos de proyecto:
+
+Servicios del area administrativa en educación
+Servicios administrativos en salud
+E_comercio
+Servicios educativos en sistematización de notas
+
+Despues de analizar los pro y contra de cada uno de los prototipos se decidió en forma unanime por Servicios educativos en sistematización de notas.
+
+PUNTO DOS: El compañero Roberto Paternina creo el repositorio GitHub para el proyecto, y explico a cada uno la forma como se hizo.
+
+PUNTO TRES: Se acordo realizar la proxima reunion el dia domingo a las 9 am.
+
+Firmado y Revisado por 	ARTURO DOMINGUEZ TELLO
