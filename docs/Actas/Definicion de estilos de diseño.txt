@@ -1,0 +1,22 @@
+Definición de como se realizará el desarrollo
+
+- Definimos que los nuevos ingresos y las ediciones se haran por medio de modales
+- Para listar se usaran tablas
+- Eliminar será un cambio de estado
+  - Este tambien desplegará una advertencia de si acepta o no eliminar (cambiar de estado el registro)
+- Utilizaremos filtros para actualizar las tablas
+ - Se utilizaran checkbox para marcar los filtros requeridos
+ - Analizar la opcion de select para los casos que corresponda
+- El layout a utilizar está definido en la carpera src/components/layout.html
+
+Textos predefinidos
+
+ACCIONES:
+- Nuevo
+  - Guardar
+  - Cancelar
+- Actualizar
+- Activar/Desactivar
+- Consultar
+- Generar
+  - Descargar
