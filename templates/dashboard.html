@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="theme-light">
 
 <head>
     <meta charset="UTF-8">
@@ -21,8 +21,7 @@
                 <input type="text" placeholder="Search">
             </span>
             <div class="dropdown">
-                <a href="#" class="dropdown-trigger" data-target="user-dropdown">Username <span
-                        class="caret"></span></a>
+                <a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
                 <ul class="dropdown-menu" id="user-dropdown">
                     <li><a href="#">Perfil</a></li>
                     <li><a href="#">Configuración</a></li>
@@ -51,6 +50,17 @@
             <ul class="menu-list">
                 <li class="menu-item"><a href="#">Notas</a></li>
                 <li class="menu-item"><a href="#">Rendimiento</a></li>
+            </ul>
+            <p class="menu-label">
+                Confiruación
+            </p>
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <label id="switch" class="switch">
+                        <input type="checkbox" onchange="toggleTheme()" id="slider">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
             </ul>
         </aside>
         <main class="main">
