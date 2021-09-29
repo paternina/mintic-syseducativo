@@ -86,21 +86,65 @@
         </tbody>
       </table>
     </div>
-
-    <div class="modal">
+  </main>
+  <footer class="footer">
+    <p>Todos los derechos reservados &copy; 2021 - SysEducativo</p>
+  </footer>
+  <!-- Nuevo/Editar Usuario modal-->
+  <div class="modal" id="usermodal">
+    <div class="modal-title">
+      <h1>Nuevo Usuario</h1>
+      <span class="close">&times</span>
+    </div>
+    <div class="moda-body">
       <form action="#">
         <div class="field">
           <label for="tipodocumento">Tipo de documento</label>
           <select name="tipodocumento" id="tipodocumento">
+            <option value="rc">Registro Civil</option>
+            <option value="ti">Tarjeta de Identidad</option>
             <option value="cc">Cedula de ciudadania</option>
           </select>
         </div>
+        <div class="field">
+          <label for="numerodocumento">No. de documento</label>
+          <input type="text" name="numerodocumento" id="numerodocumento">
+        </div>
+        <div class="field">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" name="nombre" id="nombre">
+        </div>
+        <div class="field">
+          <label for="role">Tipo de usuario</label>
+          <select name="role" id="role">
+            <option value="estudiante">Estudiante</option>
+            <option value="profesor">Profesor</option>
+            <option value="coordinador">Coordinador</option>
+            <option value="acudiente">Acudiente</option>
+          </select>
+        </div>
+        <div class="field">
+          <input type="submit" class="button" value="Registrar" />
+          <button class="button">Cancelar</button>
+        </div>
       </form>
     </div>
-  </main>
-  <footer class="footer">
-    <p>Copyright &copy; 2021 - SysEducativo</p>
-  </footer>
+
+  </div>
+  <!-- Eliminar Usuario Modal -->
+  <div class="modal" id="deleteUser">
+    <div class="modal-title">
+      <h1>Eliminar Usuario</h1>
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-body">
+      <p>¿Seguro que quiere eliminar este usuario?</p>
+      <div class="btn-group">
+        <button class="button">Cancelar</button>
+        <button class="button">Eliminar</button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
