@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Template</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <div class="toggle" data-target="aside-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span class="search">
+                <input type="text" placeholder="Search">
+            </span>
+            <div class="dropdown">
+                <a href="#" class="dropdown-trigger" data-target="user-dropdown">Username <span
+                        class="caret"></span></a>
+                <ul class="dropdown-menu" id="user-dropdown">
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Configuración</a></li>
+                    <li><a href="#">Salir</a></li>
+                </ul>
+            </div>
+        </nav>
+        <aside id="aside-menu" class="menu">
+            <div class="brand">
+                SysEducativo
+            </div>
+            <p class="menu-label">General</p>
+            <ul class="menu-list">
+                <li class="menu-item"><a href="#">Dashboard</a></li>
+                <li class="menu-item"><a href="#">Materias</a></li>
+                <li class="menu-item"><a href="#">Notas</a></li>
+                <li class="menu-item"><a href="#">Usuarios</a></li>
+            </ul>
+            <p class="menu-label">Adiministración</p>
+            <ul class="menu-list">
+                <li class="menu-item"><a href="#">Profesores</a></li>
+                <li class="menu-item"><a href="#">Estudiantes</a></li>
+                <li class="menu-item"><a href="#">Profesores</a></li>
+            </ul>
+            <p class="menu-label">Reportes</p>
+            <ul class="menu-list">
+                <li class="menu-item"><a href="#">Notas</a></li>
+                <li class="menu-item"><a href="#">Rendimiento</a></li>
+            </ul>
+        </aside>
+        <main class="main">
+            <section class="section">
+                <p>Esta es una seccion en el dashboard</p>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>Todos los derechos reservador &copy; 2021 - SysEducativo</p>
+        </footer>
+
+        <script src="js/dashboard.js"></script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+/*  Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* Variables */
+:root {
+    --bg-color: #fdfdfd;
+    --text-color: #333333;
+    --primary: #fa23fa;
+    --secondary: #d3fad3;
+    --danger: red;
+    --warning: orange;
+    --info: skyblue;
+    --success: green;
+    --padding: 1rem;
+    --text-size: 16px;
+    --title-zise: 24px;
+}
+/* Reset */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+button,
+input,
+select {
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+  font-size: var(--text-size);
+  font-family: 'Roboto', sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* custom */
+
+.toggle {
+  color: #4a4a4a;
+  cursor: pointer;
+  display: block;
+  height: 3.25rem;
+  position: relative;
+  width: 3.25rem;
+}
+
+.toggle span {
+  background-color: #333;
+  display: block;
+  height: 1px;
+  left: calc(50% - 8px);
+  position: absolute;
+  transform-origin: center;
+  transition-duration: 86ms;
+  transition-property: background-color, opacity, transform;
+  transition-timing-function: ease-out;
+  width: 16px;
+}
+
+.toggle span:nth-child(1) {
+  top: calc(50% - 6px);
+}
+
+.toggle span:nth-child(2) {
+  top: calc(50% - 1px);
+}
+
+.toggle span:nth-child(3) {
+  top: calc(50% + 4px);
+}
+
+.toggle.is-active span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle.is-active span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  background-color: #fff;
+  padding: 0.5rem 0;
+}
+
+.dropdown {
+  font-size: var(--text-size);
+  display: inline-flex;
+  position: relative;
+  vertical-align: top;
+}
+
+.dropdown-menu {
+  display: none;
+  left: 0;
+  min-width: 12rem;
+  padding-top: 4px;
+  position: absolute;
+  top: 100%;
+  z-index: 20;
+}
+
+.dropdown-menu li {
+  padding: 0.25rem 0.5rem;
+}
+
+.dropdown-menu li:hover {
+  color:var(--primary);
+  font-weight: 500;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.footer, .footer > * {
+  text-align: center;
+  font-size: 12px;
+}
+
+.main, .section {
+  padding: var(--padding);
+}
