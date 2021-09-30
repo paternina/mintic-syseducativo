@@ -23,6 +23,7 @@
  /* Por definir */
   --bg-color: #2c3e50;
   --text-color: #fdfdfd;
+  --primary: #fa23fa;
   --text-muted: rgba(255,255, 255, 0.6);
 }
 /* Reset */
@@ -100,7 +101,79 @@ a {
     color: var(--text-color);
 }
 
+
 /* custom */
+a:hover, li:hover a {
+  color: var(--primary)
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0.5rem;
+    background-color: var(--bg-color);
+    width: 100% ;
+    position: relative;
+}
+
+.brand {
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--text-color)
+}
+
+.navbar-menu.is-active {
+    position: absolute;
+    background-color: var(--bg-color);
+    z-index: 100;
+    top: 50px;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-right {
+    gap: 0.25rem;
+}
+
+.menu, .navbar-menu {
+    display: none;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 0 var(--padding);
+    color: var(--text-color);
+}
+
+.menu-item, .menu-item a , .navbar-item, .navbar-item a {
+    color: var(--text-color);
+}
+
+.menu-list .menu-item, .navbar-menu .navbar-item {
+        padding-bottom: 0.5rem;
+}
+
+.menu .menu-label {
+    color:var(--text-muted);
+    padding: var(--padding) 0;
+}
+
+.menu.is-active, .navbar-menu.is-active {
+    display: block;
+    position: absolute;
+    background-color: var(--bg-color);
+    z-index: 100;
+}
+
+.search {
+    display: none;
+}
 
 .toggle {
   color: var(--text-color);
@@ -151,7 +224,6 @@ a {
 .dropdown:hover .dropdown-menu {
   display: block;
   background-color: var(--bg-color);
-  padding: 0.5rem 0;
 }
 
 .dropdown {
@@ -163,16 +235,17 @@ a {
 
 .dropdown-menu {
   display: none;
-  left: 0;
-  min-width: 12rem;
+  right: -0.5rem;
+  /* min-width: 12rem; */
   padding-top: 4px;
   position: absolute;
   top: 100%;
   z-index: 20;
+  border-radius: 0 0 5px 5px;
 }
 
 .dropdown-menu li {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 1rem;
 }
 
 .dropdown-menu li:hover {
@@ -272,4 +345,10 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-left, .navbar-right {
+        gap: var(--padding);
+    }
 }

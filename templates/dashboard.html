@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Template</title>
+    <title>Dashboard Template</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
@@ -12,27 +12,32 @@
 <body>
     <div class="wrapper">
         <nav class="navbar">
-            <div class="toggle" data-target="aside-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="navbar-left">
+                <div class="toggle" data-target="aside-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="brand">
+                    SysEducativo
+                </div>
+                <span class="search">
+                    <input type="text" placeholder="Search">
+                </span>
             </div>
-            <span class="search">
-                <input type="text" placeholder="Search">
-            </span>
-            <div class="dropdown">
-                <a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
-                <ul class="dropdown-menu" id="user-dropdown">
-                    <li><a href="#">Perfil</a></li>
-                    <li><a href="#">Configuración</a></li>
-                    <li><a href="#">Salir</a></li>
-                </ul>
+
+            <div class="navbar-right">
+                <div class="dropdown">
+                    <a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="user-dropdown">
+                        <li><a href="#">Perfil</a></li>
+                        <li><a href="#">Configuración</a></li>
+                        <li><a href="#">Salir</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <aside id="aside-menu" class="menu">
-            <div class="brand">
-                SysEducativo
-            </div>
             <p class="menu-label">General</p>
             <ul class="menu-list">
                 <li class="menu-item"><a href="#">Dashboard</a></li>
@@ -71,9 +76,9 @@
         <footer class="footer">
             <p>Todos los derechos reservador &copy; 2021 - SysEducativo</p>
         </footer>
-
-        <script src="js/dashboard.js"></script>
     </div>
+    <script src="js/global.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 
 </html>
