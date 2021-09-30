@@ -103,7 +103,7 @@ a {
 /* custom */
 
 .toggle {
-  color: #4a4a4a;
+  color: var(--text-color);
   cursor: pointer;
   display: block;
   height: 3.25rem;
@@ -112,7 +112,7 @@ a {
 }
 
 .toggle span {
-  background-color: #333;
+  background-color: var(--text-color);
   display: block;
   height: 1px;
   left: calc(50% - 8px);
