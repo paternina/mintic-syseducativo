@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syseducativo</title>
+  </head>
+  <body>
+    <aside class="side-menu">
+      <ul>
+        <li><a href="#">Usuarios</a></li>
+        <!-- Alumnos -->
+        <li><a href="#">Materias</a></li>
+        <!-- Profesores, Cordinadores -->
+        <li><a href="#">Alumnos</a></li>
+        <li><a href="#">Grupos</a></li>
+      </ul>
+    </aside>
+    <nav class="top-menu">
+      <li><a href="#">Dashboard</a></li>
+      <li>
+        <a href="#">Username <i class="user"></i></a>
+      </li>
+      <ul>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#">Salir</a></li>
+      </ul>
+    </nav>
+    <main class="container">
+      <h1>Pagos</h1>
+      <form method="GET">
+        <p><strong>ESTUDIANTE</strong></p>
+        <label for="nombre">Nombres: </label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Escriba el/los nombre(s) del estudiante"
+          required="true"
+        /><br /><br />
+
+        <label for="apellido">Apellidos: </label>
+        <input
+          type="text"
+          id="apellido"
+          name="apellido"
+          placeholder="Escriba el/los apellido(s) del estudiante"
+          required
+        /><br /><br />
+
+        <label for="grado">Grado</label>
+        <input
+          type="number"
+          id="grado"
+          name="grado"
+          step="any"
+          required
+        /><br /><br /><br />
+
+        <label><strong>Jornada</strong></label
+        ><br /><br />
+        <input type="radio" id="mañana" name="mañana" value="mañana" />
+        <label for="mañana">Mañana</label><br />
+        <input type="radio" id="tarde" name="mañana" value="tarde" />
+        <label for="tarde">Tarde</label><br /><br /><br />
+
+        <label><strong>CONCEPTO DEL PAGO</strong></label
+        ><br /><br />
+        <input
+          type="checkbox"
+          id="matricula"
+          name="lenguaje"
+          value="matricula"
+        />
+        <label for="matricula">Matrícula</label><br />
+        <input type="checkbox" id="pension" name="lenguaje" value="pension" />
+        <label for="pension">Pensión</label><br /><br />
+
+        <p><strong>RESPONSABLE DEL PAGO</strong></p>
+        <label for="nombre">Nombres: </label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Escriba el/los nombre(s) del solicitante"
+          required="true"
+        /><br /><br />
+
+        <label for="apellido">Apellidos: </label>
+        <input
+          type="text"
+          id="apellido"
+          name="apellido"
+          placeholder="Escriba el/los apellido(s) del solicitante"
+          required
+        /><br /><br />
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Escriba el correo electrónico"
+          required
+        /><br /><br /><br />
+
+        <label>¿Solicita certificación del pago?</label><br /><br />
+        <input type="radio" id="Sí" name="Sí" value="Sí" />
+        <label for="Sí">Sí</label><br />
+        <input type="radio" id="No" name="Sí" value="No" />
+        <label for="No">No</label><br /><br />
+
+        <p><strong>PROCESO DE PAGO</strong></p>
+
+        <label for="tipoPago">Forma de Pago: </label><br /><br />
+        <select id="tipoPago" name="tipoPago" multiple="true">
+          <option value="pse">PSE</option>
+          <option value="tarjetaCredito">Tarjeta de Credito</option>
+          <option value="nequi">Nequi</option>
+          <option value="daviplata">Daviplata</option></select
+        ><br /><br />
+
+        <label for="comentario">Comentario:</label><br />
+        <textarea id="comentario" name="comentario" rows="2" cols="30">
+        </textarea
+        ><br /><br />
+
+        <input type="submit" value="Pagar" />
+        <input
+          type="submit"
+          value="Pagar sin validar"
+          formnovalidate="formnovalidate"
+        />
+      </form>
+    </main>
+    <footer class="footer">
+      <p>Copyright &copy; 2021 - SysEducativo</p>
+    </footer>
+  </body>
+</html>
