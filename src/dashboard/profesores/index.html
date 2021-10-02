@@ -1,0 +1,146 @@
+<!DOCTYPE html>	
+	<html lang="es">
+	 <head>
+	   <meta charset="UTF-8" />
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	   <title>Profesores</title>
+	   <link rel="stylesheet" href="/css/minireset.css" />
+	   <link rel="stylesheet" href="/css/global.css" />
+	 </head>
+	 <body>
+	   <!-- Menu de navegacion -->
+	   <aside class="side-menu">
+	     <ul>
+	       <li><a href="#">Dashboard</a></li>
+	       <li><a href="#">Usuarios</a></li>
+	       <!-- Alumnos -->
+	       <li><a href="#">Materias</a></li>
+	       <!-- Profesores, Cordinadores -->
+	       <li><a href="#">Alumnos</a></li>
+	       <li><a href="#">Grupos</a></li>
+	     </ul>
+	   </aside>
+	   <nav class="top-menu">
+	     <li><a href="#">Dashboard</a></li>
+	     <li>
+	       <a href="#">Username <i class="user"></i></a>
+	     </li>
+	     <ul>
+	       <li><a href="#">Perfil</a></li>
+	       <li><a href="#"> --- </a></li>
+	       <li><a href="#">Salir</a></li>
+	     </ul>
+	   </nav>
+	   <main class="container">
+	     <!-- CONTENIDO -->
+		 
+		 <h1 align="center">Administración de Profesores</h1>
+		 
+		 <table align="center" >
+			<tr>
+				<th>
+					Nombre
+				</th>
+				<th>
+					Correo
+				</th>
+				<th>
+					Telefono
+				</th>
+				<th>
+					Accion
+				</th>
+			</tr>
+			<tr>
+				<td>
+					Daniel Perea Murillo
+				</td>
+				<td>
+					dmurilo@colegiosyseducativo.edu.co
+				</td>
+				<td>
+					3123148810
+				</td>
+				<td>
+					<button type="button">Actualizar</button> <button type="button" onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Francisco Mena
+				</td>
+				<td>
+					fmena@colegiosyseducativo.edu.co
+				</td>
+				<td>
+					3163861673
+				</td>
+				<td>
+					<button type="button">Actualizar</button> <button type="button" onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					Victor Mora Patiño
+				</td>
+				<td>
+					vmora@colegiosyseducativo.edu.co
+				</td>
+				<td>
+					3454545
+				</td>
+				<td>
+					<button type="button">Actualizar</button> <button type="button" onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+				</td>
+			</tr>
+		 </table>
+		 <br/>
+		 <div align="center">
+			<button type="button">Nuevo Profesor</button>
+		</div>
+		<br/>
+		<table align="center" >
+			<tr align="left">
+				<th>
+					Nombre
+				</th>
+				<th align="left">
+					<input type="text" id="nombrep" name="nombrep" required minlength="4" maxlength="80" size="100">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					Correo
+				</th>
+				<th align="left">
+					<input type="text" id="correop" name="correop" required minlength="4" maxlength="60" size="80">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					Telefono
+				</th>
+				<th align="left">
+					<input type="number"  id="telefonop" name="telefonop" required minlength="9" maxlength="15" size="15">
+				</th>
+			</tr>
+		</table>
+		
+		<div align="center">
+			<button type="button" onclick="if (!confirm('¿Esta seguro de Guardar este registro?')) {return false};">Guardar</button>
+		</div>
+		 		
+		<div align="center">
+			<button type="button">Cancelar</button>
+		</div>
+		 
+	   </main>
+	   <footer class="footer">
+	     <p>Copyright &copy; 2021 - SysEducativo</p>
+	   </footer>
+	
+
+	   <script src="/js/global.js"></script>
+	 </body>
+	</html>

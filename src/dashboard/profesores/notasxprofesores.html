@@ -1,0 +1,156 @@
+<!DOCTYPE html>	
+	<html lang="es">
+	 <head>
+	   <meta charset="UTF-8" />
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	   <title>Notas por Profesor</title>
+	   <link rel="stylesheet" href="/css/minireset.css" />
+	   <link rel="stylesheet" href="/css/global.css" />
+	 </head>
+	 <body>
+	   <!-- Menu de navegacion -->
+	   <aside class="side-menu">
+	     <ul>
+	       <li><a href="#">Dashboard</a></li>
+	       <li><a href="#">Usuarios</a></li>
+	       <!-- Alumnos -->
+	       <li><a href="#">Materias</a></li>
+	       <!-- Profesores, Cordinadores -->
+	       <li><a href="#">Alumnos</a></li>
+	       <li><a href="#">Grupos</a></li>
+	     </ul>
+	   </aside>
+	   <nav class="top-menu">
+	     <li><a href="#">Dashboard</a></li>
+	     <li>
+	       <a href="#">Username <i class="user"></i></a>
+	     </li>
+	     <ul>
+	       <li><a href="#">Perfil</a></li>
+	       <li><a href="#"> --- </a></li>
+	       <li><a href="#">Salir</a></li>
+	     </ul>
+	   </nav>
+	   <main class="container">
+	     <!-- CONTENIDO -->
+		 
+		 <h1 align="center">Notas por Profesor</h1> <br/>
+		 <h2 align="center">Daniel Perea Murillo</h2> <br/>
+		 
+		 <table align="center" >
+			<tr align="left">
+				<th>
+					Curso
+				</th>
+				<th align="left">
+					<select>
+					  <option value="" disabled>seleccione un curso</option>
+					  <option value="1a">1a</option>
+					  <option value="2a">2a</option>
+					  <option value="2b">2b</option>
+					  <option value="3a">3a</option>
+					</select>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					Materia
+				</th>
+				<th align="left">
+					<select>
+					  <option value="" disabled>seleccione un curso</option>
+					  <option value="Biologia">Biologia</option>
+					  <option value="Matematicas">Matematicas</option>
+					  <option value="Fisica">Fisica</option>
+					  <option value="Quimica">Quimica</option>
+					</select>
+				</th>
+			</tr>
+		</table>
+		 
+		 <br/>
+		 
+		 <table align="center" >
+			<tr>
+				<th>
+					Nombre del Estudiante
+				</th>
+				<th>
+					Nota
+				</th>
+				<th>
+					Accion
+				</th>
+			</tr>
+			<tr>
+				<td>
+					Daniel Arturo Dominguez
+				</td>
+				<td>
+					4.5
+				</td>
+				<td>
+					<button type="button">Actualizar</button> <button type="button" onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button> <button type="button">Nueva Nota</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Francisco Rodriguez Diaz
+				</td>
+				<td>
+					3.2
+				</td>
+				<td>
+					<button type="button">Actualizar</button> <button type="button" onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button> <button type="button">Nueva Nota</button>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					Victor Mora Patiño
+				</td>
+				<td>
+					4.7
+				</td>
+				<td>
+					<button type="button">Actualizar</button> <button type="button" onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button> <button type="button">Nueva Nota</button>
+				</td>
+			</tr>
+		 </table>
+		<br/>
+		<table align="center" >
+			<tr align="left">
+				<th>
+					Nombre
+				</th>
+				<th align="left">
+					<input type="text" id="nombrea" name="nombrea" required minlength="4" maxlength="80" size="100" disabled="yes">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					Nota
+				</th>
+				<th align="left">
+					<input type="number" step="any" id="nota" name="nota" required minlength="1" maxlength="4" size="5">
+				</th>
+			</tr>
+		</table>
+		
+		<div align="center">
+			<button type="button" onclick="if (!confirm('¿Esta seguro de Guardar este registro?')) {return false};">Guardar</button>
+		</div>
+		
+		<div align="center">
+			<button type="button">Cancelar</button>
+		</div>
+		 
+	   </main>
+	   <footer class="footer">
+	     <p>Copyright &copy; 2021 - SysEducativo</p>
+	   </footer>
+	
+
+	   <script src="/js/global.js"></script>
+	 </body>
+	</html>
