@@ -6,34 +6,71 @@
 	   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	   <title>Profesores</title>
 	   <link rel="stylesheet" href="/css/minireset.css" />
-	   <link rel="stylesheet" href="/css/global.css" />
+	   <link rel="stylesheet" href="../../css/common.css">
+	   <link rel="stylesheet" href="../../css/dashboard.css">
 	 </head>
 	 <body>
-	   <!-- Menu de navegacion -->
-	   <aside class="side-menu">
-	     <ul>
-	       <li><a href="#">Dashboard</a></li>
-	       <li><a href="#">Usuarios</a></li>
-	       <!-- Alumnos -->
-	       <li><a href="#">Materias</a></li>
-	       <!-- Profesores, Cordinadores -->
-	       <li><a href="#">Alumnos</a></li>
-	       <li><a href="#">Grupos</a></li>
-	     </ul>
-	   </aside>
-	   <nav class="top-menu">
-	     <li><a href="#">Dashboard</a></li>
-	     <li>
-	       <a href="#">Username <i class="user"></i></a>
-	     </li>
-	     <ul>
-	       <li><a href="#">Perfil</a></li>
-	       <li><a href="#"> --- </a></li>
-	       <li><a href="#">Salir</a></li>
-	     </ul>
-	   </nav>
-	   <main class="container">
-	     <!-- CONTENIDO -->
+		<div class="wrapper">
+			<nav class="navbar">
+				<div class="navbar-left">
+					<div class="toggle" data-target="aside-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="brand">
+						SysEducativo
+					</div>
+					<span class="search">
+						<input type="text" placeholder="Search">
+					</span>
+				</div>
+	
+				<div class="navbar-right">
+					<div class="dropdown">
+						<a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
+						<ul class="dropdown-menu" id="user-dropdown">
+							<li><a href="#">Perfil</a></li>
+							<li><a href="#">Configuración</a></li>
+							<li><a href="#">Salir</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<aside id="aside-menu" class="menu">
+				<p class="menu-label">General</p>
+				<ul class="menu-list">
+					<li class="menu-item"><a href="#">Dashboard</a></li>
+					<li class="menu-item"><a href="../materias/materias.html">Materias</a></li>
+					<li class="menu-item"><a href="../notas/index.html">Notas</a></li>
+					<li class="menu-item"><a href="../users/index.html">Usuarios</a></li>
+				</ul>
+				<p class="menu-label">Adiministración</p>
+				<ul class="menu-list">
+					<li class="menu-item"><a href="../profesores/index.html">Profesores</a></li>
+					<li class="menu-item"><a href="#">Estudiantes</a></li>
+					<li class="menu-item"><a href="#">Profesores</a></li>
+				</ul>
+				<p class="menu-label">Reportes</p>
+				<ul class="menu-list">
+					<li class="menu-item"><a href="#">Notas</a></li>
+					<li class="menu-item"><a href="#">Rendimiento</a></li>
+				</ul>
+				<p class="menu-label">
+					Configuración
+				</p>
+				<ul class="menu-list">
+					<li class="menu-item">
+						<label id="switch" class="switch">
+							<input type="checkbox" onchange="toggleTheme()" id="slider">
+							<span class="slider round"></span>
+						</label>
+					</li>
+				</ul>
+			</aside>
+			<main class="main">
+				<section class="section">
+						     <!-- CONTENIDO -->
 		 
 		 <h1 align="center">Administración de Profesores</h1>
 		 
@@ -135,12 +172,15 @@
 			<button type="button">Cancelar</button>
 		</div>
 		 
-	   </main>
-	   <footer class="footer">
-	     <p>Copyright &copy; 2021 - SysEducativo</p>
-	   </footer>
+				</section>
+			</main>
+			<footer class="footer">
+				<p>Todos los derechos reservador &copy; 2021 - SysEducativo</p>
+			</footer>
+		</div>
 	
 
-	   <script src="/js/global.js"></script>
+	   <script src="../../js/global.js"></script>
+	   <script src="../../js/dashboard.js"></script>
 	 </body>
 	</html>
