@@ -1,49 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-  </head>
-  <body>
-    <!-- Menu de navegacion -->
-    <aside class="side-menu">
-      <ul>
-        <li><a href="#">Usuarios</a></li>
-        <!-- Alumnos -->
-        <li><a href="#">Materias</a></li>
-        <!-- Profesores, Cordinadores -->
-        <li><a href="#">Alumnos</a></li>
-        <li><a href="#">Grupos</a></li>
+<html lang="es" class="theme-light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Template</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="toggle" data-target="aside-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="brand">
+          SysEducativo
+        </div>
+        <span class="search">
+          <input type="text" placeholder="Search">
+        </span>
+      </div>
+
+      <div class="navbar-right">
+        <div class="dropdown">
+          <a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="user-dropdown">
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Configuración</a></li>
+            <li><a href="#">Salir</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <aside id="aside-menu" class="menu">
+      <p class="menu-label">General</p>
+      <ul class="menu-list">
+        <li class="menu-item"><a href="./index.html">Dashboard</a></li>
+        <li class="menu-item"><a href="./materias/materias.html">Materias</a></li>
+        <li class="menu-item"><a href="./notas/index.html">Notas</a></li>
+        <li class="menu-item"><a href="./users/index.html">Usuarios</a></li>
+      </ul>
+      <p class="menu-label">Adiministración</p>
+      <ul class="menu-list">
+        <li class="menu-item"><a href="#">Profesores</a></li>
+        <li class="menu-item"><a href="#">Estudiantes</a></li>
+        <li class="menu-item"><a href="#">Profesores</a></li>
+      </ul>
+      <p class="menu-label">Reportes</p>
+      <ul class="menu-list">
+        <li class="menu-item"><a href="#">Notas</a></li>
+        <li class="menu-item"><a href="#">Rendimiento</a></li>
+      </ul>
+      <p class="menu-label">
+        Configuración
+      </p>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+          </label>
+        </li>
       </ul>
     </aside>
-    <nav class="top-menu">
-      <li><a href="#">Dashboard</a></li>
-      <li>
-        <a href="#">Username <i class="user"></i></a>
-      </li>
-      <ul>
-        <li><a href="#">Perfil</a></li>
-        <li><a href="#">Salir</a></li>
-      </ul>
-    </nav>
-    <main class="container">
-      <div class="saludo">
-        <h1>
-          Hola <span id="logeduser">Username</span>, Bienvenido al sistema
-          educativo, SysEducativo
-        </h1>
-      </div>
-      <section class="datos">
-        <!-- Aqui estaria la informacion del usuario logeado-->
+    <main class="main">
+      <section class="section">
+        <h1 class="title">Bienvenido, Username.</h1>
       </section>
-      <section class="noticias">
-        <!-- Aqui estarian las noticias importantes del sistema o de la institucion -->
-      </section>
-      <footer class="footer">
-        <p>Copyright &copy; 2021 - SysEducativo</p>
-      </footer>
     </main>
-  </body>
+    <footer class="footer">
+      <p>Todos los derechos reservador &copy; 2021 - SysEducativo</p>
+    </footer>
+  </div>
+  <script src="../js/global.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+
 </html>

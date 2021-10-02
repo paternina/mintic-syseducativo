@@ -6,90 +6,130 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Usuarios</title>
-  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/dashboard.css">
 </head>
 
 <body>
-  <!-- Menu de navegacion -->
-  <aside class="side-menu">
-    <ul>
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">Usuarios</a></li>
-      <!-- Alumnos -->
-      <li><a href="#">Materias</a></li>
-      <!-- Profesores, Cordinadores -->
-      <li><a href="#">Alumnos</a></li>
-      <li><a href="#">Grupos</a></li>
-    </ul>
-  </aside>
-  <nav class="navbar">
-    <a href="#">Dashboard</a>
-    <ul class="menu">
-      <li class="menu-link">
-        <a href="#">Username <i class="user"></i></a>
-      </li>
-      <li><a href="#">Perfil</a></li>
-      <li><a href="#"> --- </a></li>
-      <li><a href="#">Salir</a></li>
-    </ul>
-  </nav>
-  <main class="container">
-    <div class="options">
-      <a class="button" href="#">Crear</a>
-      <a class="button" href="#">Descargar</a>
-    </div>
-    <div class="table">
-      <table>
-        <thead>
-          <tr>
-            <th>Tipo documento</th>
-            <th>Identificacion</th>
-            <th>Nombre Completo</th>
-            <th>Rol</th>
-            <th>Opciones</th>
-          </tr>
-        </thead>
-        <tbody id="usuarios">
-          <tr>
-            <td>CC</td>
-            <td>1000000</td>
-            <td>Carlos Albeiro</td>
-            <td>Padre</td>
-            <td>
-              <button>Editar</button>
-              <button>Consultar</button>
-              <button>Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>CC</td>
-            <td>1000001</td>
-            <td>John Doe</td>
-            <td>Administrador</td>
-            <td>
-              <button>Editar</button>
-              <button>Consultar</button>
-              <button>Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>CC</td>
-            <td>1000001</td>
-            <td>Joa Doe</td>
-            <td>Profesor</td>
-            <td>
-              <button>Editar</button>
-              <button>Consultar</button>
-              <button>Eliminar</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </main>
-  <footer class="footer">
-    <p>Todos los derechos reservados &copy; 2021 - SysEducativo</p>
-  </footer>
+  <div class="wrapper">
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="toggle" data-target="aside-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="brand">
+          SysEducativo
+        </div>
+        <span class="search">
+          <input type="text" placeholder="Search">
+        </span>
+      </div>
+
+      <div class="navbar-right">
+        <div class="dropdown">
+          <a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="user-dropdown">
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Configuración</a></li>
+            <li><a href="#">Salir</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <aside id="aside-menu" class="menu">
+      <p class="menu-label">General</p>
+      <ul class="menu-list">
+        <li class="menu-item"><a href="../index.html">Dashboard</a></li>
+        <li class="menu-item"><a href="../materias/materias.html">Materias</a></li>
+        <li class="menu-item"><a href="../notas/index.html">Notas</a></li>
+        <li class="menu-item"><a href="../users/index.html">Usuarios</a></li>
+      </ul>
+      <p class="menu-label">Adiministración</p>
+      <ul class="menu-list">
+        <li class="menu-item"><a href="#">Profesores</a></li>
+        <li class="menu-item"><a href="#">Estudiantes</a></li>
+        <li class="menu-item"><a href="#">Profesores</a></li>
+      </ul>
+      <p class="menu-label">Reportes</p>
+      <ul class="menu-list">
+        <li class="menu-item"><a href="#">Notas</a></li>
+        <li class="menu-item"><a href="#">Rendimiento</a></li>
+      </ul>
+      <p class="menu-label">
+        Configuración
+      </p>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+          </label>
+        </li>
+      </ul>
+    </aside>
+    <main class="main">
+      <section class="section">
+        <div class="options">
+          <a class="button" href="#">Crear</a>
+          <a class="button" href="#">Descargar</a>
+        </div>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo documento</th>
+                <th>Identificacion</th>
+                <th>Nombre Completo</th>
+                <th>Rol</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <tbody id="usuarios">
+              <tr>
+                <td>CC</td>
+                <td>1000000</td>
+                <td>Carlos Albeiro</td>
+                <td>Padre</td>
+                <td>
+                  <button>Editar</button>
+                  <button>Consultar</button>
+                  <button>Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>CC</td>
+                <td>1000001</td>
+                <td>John Doe</td>
+                <td>Administrador</td>
+                <td>
+                  <button>Editar</button>
+                  <button>Consultar</button>
+                  <button>Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>CC</td>
+                <td>1000001</td>
+                <td>Joa Doe</td>
+                <td>Profesor</td>
+                <td>
+                  <button>Editar</button>
+                  <button>Consultar</button>
+                  <button>Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>Todos los derechos reservador &copy; 2021 - SysEducativo</p>
+    </footer>
+  </div>
+
   <!-- Nuevo/Editar Usuario modal-->
   <div class="modal" id="usermodal">
     <div class="modal-title">
@@ -129,7 +169,6 @@
         </div>
       </form>
     </div>
-
   </div>
   <!-- Eliminar Usuario Modal -->
   <div class="modal" id="deleteUser">
@@ -145,6 +184,9 @@
       </div>
     </div>
   </div>
+
+  <script src="../../js/global.js"></script>
+  <script src="../../js/dashboard.js"></script>
 </body>
 
 </html>
