@@ -1,193 +1,204 @@
-<!DOCTYPE html>	
-	<html lang="es">
-	 <head>
-	   <meta charset="UTF-8" />
-	   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	   <title>Notas por Profesor</title>
-	   <link rel="stylesheet" href="../../css/minireset.css" />
-	   <link rel="stylesheet" href="../../css/common.css">
-	   <link rel="stylesheet" href="../../css/dashboard.css">
-	 </head>
-	 <body>
-		<div class="wrapper">
-			<nav class="navbar">
-				<div class="navbar-left">
-					<div class="toggle" data-target="aside-menu">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<div class="brand">
-						SysEducativo
-					</div>
-					<span class="search">
-						<input type="text" placeholder="Search">
-					</span>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Notas por Profesor</title>
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav class="navbar">
+			<div class="navbar-left">
+				<div class="toggle" data-target="aside-menu">
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
-	
-				<div class="navbar-right">
-					<div class="dropdown">
-						<a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
-						<ul class="dropdown-menu" id="user-dropdown">
-							<li><a href="#">Perfil</a></li>
-							<li><a href="#">Configuración</a></li>
-							<li><a href="#">Salir</a></li>
-						</ul>
-					</div>
+				<div class="brand">
+					SysEducativo
 				</div>
-			</nav>
-			<aside id="aside-menu" class="menu">
-				<p class="menu-label">General</p>
-				<ul class="menu-list">
-					<li class="menu-item"><a href="#">Dashboard</a></li>
-					<li class="menu-item"><a href="../materias/materias.html">Materias</a></li>
-					<li class="menu-item"><a href="../notas/index.html">Notas</a></li>
-					<li class="menu-item"><a href="../users/index.html">Usuarios</a></li>
-				</ul>
-				<p class="menu-label">Adiministración</p>
-				<ul class="menu-list">
-					<li class="menu-item"><a href="../profesores/index.html">Profesores</a></li>
-					<li class="menu-item"><a href="#">Estudiantes</a></li>
-					<li class="menu-item"><a href="#">Profesores</a></li>
-				</ul>
-				<p class="menu-label">Reportes</p>
-				<ul class="menu-list">
-					<li class="menu-item"><a href="#">Notas</a></li>
-					<li class="menu-item"><a href="#">Rendimiento</a></li>
-				</ul>
-				<p class="menu-label">
-					Configuración
-				</p>
-				<ul class="menu-list">
-					<li class="menu-item">
-						<label id="switch" class="switch">
-							<input type="checkbox" onchange="toggleTheme()" id="slider">
-							<span class="slider round"></span>
-						</label>
-					</li>
-				</ul>
-			</aside>
-			<main class="main">
-				<section class="section">
-						     <!-- CONTENIDO -->
-		 
-		 <h1 align="center">Notas por Profesor</h1> <br/>
-		 <h2 align="center">Daniel Perea Murillo</h2> <br/>
-		 
-		 <table align="center" >
-			<tr align="left">
-				<th>
-					Curso
-				</th>
-				<th align="left">
-					<select>
-					  <option value="" disabled>seleccione un curso</option>
-					  <option value="1a">1a</option>
-					  <option value="2a">2a</option>
-					  <option value="2b">2b</option>
-					  <option value="3a">3a</option>
-					</select>
-				</th>
-			</tr>
-			<tr>
-				<th>
-					Materia
-				</th>
-				<th align="left">
-					<select>
-					  <option value="" disabled>seleccione un curso</option>
-					  <option value="Biologia">Biologia</option>
-					  <option value="Matematicas">Matematicas</option>
-					  <option value="Fisica">Fisica</option>
-					  <option value="Quimica">Quimica</option>
-					</select>
-				</th>
-			</tr>
-		</table>
-		 
-		 <br/>
-		 
-		 <table align="center" >
-			<tr>
-				<th>
-					Nombre del Estudiante
-				</th>
-				<th>
-					Nota
-				</th>
-				<th>
-					Accion
-				</th>
-			</tr>
-			<tr>
-				<td>
-					Daniel Arturo Dominguez
-				</td>
-				<td>
-					4.5
-				</td>
-				<td>
-					<button type="button">Actualizar</button> <button type="button" onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button> <button type="button">Nueva Nota</button>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Francisco Rodriguez Diaz
-				</td>
-				<td>
-					3.2
-				</td>
-				<td>
-					<button type="button">Actualizar</button> <button type="button" onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button> <button type="button">Nueva Nota</button>
-				</td>
-			</tr>
-				<tr>
-				<td>
-					Victor Mora Patiño
-				</td>
-				<td>
-					4.7
-				</td>
-				<td>
-					<button type="button">Actualizar</button> <button type="button" onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button> <button type="button">Nueva Nota</button>
-				</td>
-			</tr>
-		 </table>
-		<br/>
-		<table align="center" >
-			<tr align="left">
-				<th>
-					Nombre
-				</th>
-				<th align="left">
-					<input type="text" id="nombrea" name="nombrea" required minlength="4" maxlength="80" size="100" disabled="yes">
-				</th>
-			</tr>
-			<tr>
-				<th>
-					Nota
-				</th>
-				<th align="left">
-					<input type="number" step="any" id="nota" name="nota" required minlength="1" maxlength="4" size="5">
-				</th>
-			</tr>
-		</table>
-		
-		<div align="center">
-			<button type="button" onclick="if (!confirm('¿Esta seguro de Guardar este registro?')) {return false};">Guardar</button>
-		</div>
-		
-		<div align="center">
-			<button type="button">Cancelar</button>
-		</div>
-				</section>
-			</main>
-			<footer class="footer">
-				<p>Todos los derechos reservador &copy; 2021 - SysEducativo</p>
-			</footer>
-		</div>
-		<script src="../../js/global.js"></script>
-		<script src="../../js/dashboard.js"></script>
-	 </body>
-	</html>
+				<span class="search">
+					<input type="text" placeholder="Search">
+				</span>
+			</div>
+
+			<div class="navbar-right">
+				<div class="dropdown">
+					<a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
+					<ul class="dropdown-menu" id="user-dropdown">
+						<li><a href="#">Perfil</a></li>
+						<li><a href="#">Configuración</a></li>
+						<li><a href="#">Salir</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<aside id="aside-menu" class="menu">
+			<p class="menu-label">General</p>
+			<ul class="menu-list">
+				<li class="menu-item"><a href="#">Dashboard</a></li>
+				<li class="menu-item"><a href="../materias/materias.html">Materias</a></li>
+				<li class="menu-item"><a href="../notas/index.html">Notas</a></li>
+				<li class="menu-item"><a href="../users/index.html">Usuarios</a></li>
+			</ul>
+			<p class="menu-label">Adiministración</p>
+			<ul class="menu-list">
+				<li class="menu-item"><a href="../profesores/index.html">Profesores</a></li>
+				<li class="menu-item"><a href="#">Estudiantes</a></li>
+				<li class="menu-item"><a href="#">Profesores</a></li>
+			</ul>
+			<p class="menu-label">Reportes</p>
+			<ul class="menu-list">
+				<li class="menu-item"><a href="#">Notas</a></li>
+				<li class="menu-item"><a href="#">Rendimiento</a></li>
+			</ul>
+			<p class="menu-label">
+				Configuración
+			</p>
+			<ul class="menu-list">
+				<li class="menu-item">
+					<label id="switch" class="switch">
+						<input type="checkbox" onchange="toggleTheme()" id="slider">
+						<span class="slider round"></span>
+					</label>
+				</li>
+			</ul>
+		</aside>
+		<main class="main">
+			<section class="section">
+				<!-- CONTENIDO -->
+
+				<h1 align="center">Notas por Profesor</h1> <br />
+				<h2 align="center">Daniel Perea Murillo</h2> <br />
+
+				<table align="center">
+					<tr align="left">
+						<th>
+							Curso
+						</th>
+						<th align="left">
+							<select>
+								<option value="" disabled>seleccione un curso</option>
+								<option value="1a">1a</option>
+								<option value="2a">2a</option>
+								<option value="2b">2b</option>
+								<option value="3a">3a</option>
+							</select>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							Materia
+						</th>
+						<th align="left">
+							<select>
+								<option value="" disabled>seleccione un curso</option>
+								<option value="Biologia">Biologia</option>
+								<option value="Matematicas">Matematicas</option>
+								<option value="Fisica">Fisica</option>
+								<option value="Quimica">Quimica</option>
+							</select>
+						</th>
+					</tr>
+				</table>
+
+				<br />
+
+				<table align="center">
+					<tr>
+						<th>
+							Nombre del Estudiante
+						</th>
+						<th>
+							Nota
+						</th>
+						<th>
+							Accion
+						</th>
+					</tr>
+					<tr>
+						<td>
+							Daniel Arturo Dominguez
+						</td>
+						<td>
+							4.5
+						</td>
+						<td>
+							<button type="button">Actualizar</button> <button type="button"
+								onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+							<button type="button">Nueva Nota</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Francisco Rodriguez Diaz
+						</td>
+						<td>
+							3.2
+						</td>
+						<td>
+							<button type="button">Actualizar</button> <button type="button"
+								onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+							<button type="button">Nueva Nota</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Victor Mora Patiño
+						</td>
+						<td>
+							4.7
+						</td>
+						<td>
+							<button type="button">Actualizar</button> <button type="button"
+								onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+							<button type="button">Nueva Nota</button>
+						</td>
+					</tr>
+				</table>
+				<br />
+				<table align="center">
+					<tr align="left">
+						<th>
+							Nombre
+						</th>
+						<th align="left">
+							<input type="text" id="nombrea" name="nombrea" required minlength="4" maxlength="80"
+								size="100" disabled="yes">
+						</th>
+					</tr>
+					<tr>
+						<th>
+							Nota
+						</th>
+						<th align="left">
+							<input type="number" step="any" id="nota" name="nota" required minlength="1" maxlength="4"
+								size="5">
+						</th>
+					</tr>
+				</table>
+
+				<div align="center">
+					<button type="button"
+						onclick="if (!confirm('¿Esta seguro de Guardar este registro?')) {return false};">Guardar</button>
+				</div>
+
+				<div align="center">
+					<button type="button">Cancelar</button>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<p>Todos los derechos reservador &copy; 2021 - SysEducativo</p>
+		</footer>
+	</div>
+	<script src="../../js/global.js"></script>
+	<script src="../../js/dashboard.js"></script>
+</body>
+
+</html>
