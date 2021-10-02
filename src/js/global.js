@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "toogle" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.toggle'), 0);
+    const $modalTriggers = Array.prototype.slice.call(document.querySelectorAll('.modal-trigger'), 0);
 
     // Check if there are any navbar burgers
     if ($navbarBurgers.length > 0) {
@@ -20,6 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             });
         });
+    }
+
+    if ($modalTriggers.length > 0) {
+        $modalTriggers.forEach(el => {
+            el.addEventListener('click', () => {
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+
+                el.classList.toggle('is-active');
+                $target.classList.add('is-active');
+            })
+        })
     }
 
 });

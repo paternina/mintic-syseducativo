@@ -23,7 +23,10 @@
  /* Por definir */
   --bg-color: #2c3e50;
   --text-color: #fdfdfd;
-  --primary: #fa23fa;
+  --secondary: #457B9D;
+  --success: #A8DADC;
+  --danger: #E63946;
+  --bg-web-color: #F1FAEE;
   --text-muted: rgba(255,255, 255, 0.6);
 }
 /* Reset */
@@ -360,6 +363,7 @@ Table
 .table {
   width: 100%;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -404,7 +408,27 @@ table tbody tr.active {
 }
 
 .modal {
-  display: none;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: var(--bg-color); /* Fallback color */
+}
+
+.modal-body {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal.is-active {
+  display: block !important;
 }
 
 .button {
@@ -412,6 +436,7 @@ table tbody tr.active {
   color: var(--text-color);
   padding: 0.5rem;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
