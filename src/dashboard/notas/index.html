@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -41,21 +40,21 @@
     <aside id="aside-menu" class="menu">
       <p class="menu-label">General</p>
       <ul class="menu-list">
-        <li class="menu-item"><a href="../index.html">Dashboard</a></li>
-        <li class="menu-item"><a href="../materias/materias.html">Materias</a></li>
-        <li class="menu-item"><a href="../notas/index.html">Notas</a></li>
+        <li class="menu-item"><a href="#">Dashboard</a></li>
+        <li class="menu-item"><a href="../materias/materias.html">Materias</a></li>      
         <li class="menu-item"><a href="../users/index.html">Usuarios</a></li>
       </ul>
       <p class="menu-label">Adiministración</p>
       <ul class="menu-list">
-        <li class="menu-item"><a href="#">Profesores</a></li>
-        <li class="menu-item"><a href="#">Estudiantes</a></li>
-        <li class="menu-item"><a href="#">Profesores</a></li>
+        <li class="menu-item"><a href="../profesores/index.html">Profesores</a></li>
+        <li class="menu-item"><a href="../alumnos/alumnos.html">Estudiantes</a></li>
+        <li class="menu-item"><a href="../pagos/index.html">Pagos</a></li>
+        <li class="menu-item"><a href="../certificados/index.html">Certificados</a></li>
       </ul>
       <p class="menu-label">Reportes</p>
       <ul class="menu-list">
-        <li class="menu-item"><a href="#">Notas</a></li>
-        <li class="menu-item"><a href="#">Rendimiento</a></li>
+        <li class="menu-item"><a href="../notas/index.html">Notas</a></li>
+        <li class="menu-item"><a href="../profesores/notasxprofesores.html">Rendimiento</a></li>
       </ul>
       <p class="menu-label">
         Configuración
@@ -69,95 +68,119 @@
         </li>
       </ul>
     </aside>
+
     <main class="main">
-      <section class="section">
-        <h1>Reporte de Notas</h1>
-        <form method="GET">
-          <p><strong>ESTUDIANTE</strong></p>
-          <label for="nombre">Nombres: </label>
-          <input type="text" id="nombre" name="nombre" placeholder="Escriba el/los nombre(s) del estudiante"
-            required="true" /><br /><br />
+      <br>
+      <h1>Reporte de Notas</h1>
+      <br>
+      <form method="GET">
+        <p><strong>ESTUDIANTE</strong></p>
+        <br>
+        <label for="nombre">Nombres: </label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Escriba el/los nombre(s) del estudiante"
+          required="true"/>
+        <br /><br />
 
-          <label for="apellido">Apellidos: </label>
-          <input type="text" id="apellido" name="apellido" placeholder="Escriba el/los apellido(s) del estudiante"
-            required /><br /><br />
+        <label for="apellido">Apellidos: </label>
+        <input
+          type="text"
+          id="apellido"
+          name="apellido"
+          placeholder="Escriba el/los apellido(s) del estudiante"
+          required/>
+        <br /><br />
 
-          <label for="grado">Grado</label>
-          <input type="number" id="grado" name="grado" step="any" required /><br /><br /><br />
+        <label for="grado">Grado</label>
+        <input
+          type="number"
+          id="grado"
+          name="grado"
+          step="any"
+          required/>
+        <br /><br /><br />
 
-          <label><strong>¿Desea un reporte general o por materia?</strong></label><br /><br />
-          <input type="radio" id="general" name="general" value="general" />
-          <label for="general">General</label><br />
-          <input type="radio" id="porMateria" name="general" value="porMateria" />
-          <label for="porMateria">por Materia</label><br /><br />
+        <label><strong>¿Desea un reporte general o por materia?</strong></label>
+        <br /><br />
+        <input type="radio" id="general" name="general" value="general" />
+        <label for="general">General</label><br />
+        <input type="radio" id="porMateria" name="general" value="porMateria" />
+        <label for="porMateria">por Materia</label><br /><br /><br>
 
-          <label for="materia"><strong>Seleccione Materia(s): </strong></label><br /><br />
-          <select id="materia" name="materia" multiple="true">
-            <option value="algebra">Algebra</option>
-            <option value="analitica">Analítica</option>
-            <option value="biologia">Biología</option>
-            <option value="idiomas">Idiomas</option>
-            <option value="filosofia">Filosofía</option>
-            <option value="fisica">Física</option>
-            <option value="matematicasI">Matemáticas I</option>
-            <option value="matematicasII">Matemáticas II</option>
-            <option value="quimica">Química</option>
-          </select><br /><br />
+        <label for="materia"><strong>Seleccione Materia(s): </strong></label>
+        <br /><br />
+        <select id="materia" name="materia" multiple="true">
+          <option value="algebra">Algebra</option>
+          <option value="analitica">Analítica</option>
+          <option value="biologia">Biología</option>
+          <option value="idiomas">Idiomas</option>
+          <option value="filosofia">Filosofía</option>
+          <option value="fisica">Física</option>
+          <option value="matematicasI">Matemáticas I</option>
+          <option value="matematicasII">Matemáticas II</option>
+          <option value="quimica">Química</option></select>
+          <br /><br /><br>
 
-          <label><strong>Periodo a consultar:</strong></label><br /><br />
-          <input type="checkbox" id="bimestre" name="bimestre" value="bimestre" />
-          <label for="bimestre">Bimestral</label><br />
-          <input type="checkbox" id="semestre" name="semestre" value="semestre" />
-          <label for="semestre">Semestral</label><br />
-          <input type="checkbox" id="año" name="año" value="año" />
-          <label for="año">Anual</label><br /><br />
+        <label><strong>Periodo a consultar:</strong></label>
+        <br /><br />
+        <input type="checkbox" id="bimestre" name="bimestre" value="bimestre" />
+        <label for="bimestre">Bimestral</label><br />
+        <input type="checkbox" id="semestre" name="semestre" value="semestre" />
+        <label for="semestre">Semestral</label><br />
+        <input type="checkbox" id="año" name="año" value="año" />
+        <label for="año">Anual</label><br><br><br>
 
-          <label><strong>Notas correspondientes al alumno:</strong></label><br /><br />
-          <table border="1">
-            <tr>
-              <th>Materia</th>
-              <th>Nota</th>
-              <th>Periodo</th>
-              <th>Docente</th>
-            </tr>
-            <tr>
-              <td>Analítica</td>
-              <td>4.5</td>
-              <td>Bimestre</td>
-              <td>Miguel Hernández</td>
-            </tr>
-            <tr>
-              <td>Filosofía</td>
-              <td>3.8</td>
-              <td>Bimestre</td>
-              <td>Carlos Antonio Pérez</td>
-            </tr>
-            <tr>
-              <td>Idiomas</td>
-              <td>3.9</td>
-              <td>Bimestre</td>
-              <td>Frank Pearl</td>
-            </tr>
-          </table>
+        <input type="submit" value="consultar" /><br /><br />
 
-          <br /><br />
-          <label><strong>¿Desea imprimir el reporte?</strong></label><br /><br />
-          <input type="radio" id="Sí" name="Sí" value="Sí" />
-          <label for="Sí">Sí</label><br />
-          <input type="radio" id="No" name="Sí" value="No" />
-          <label for="No">No</label><br /><br />
+        <table>
+          <tr>
+            <th>Materia</th>
+            <th>Nota</th>
+            <th>Periodo</th>
+            <th>Docente</th>
+          </tr>
+          <tr>
+            <td>Analítica</td>
+            <td>4.5</td>
+            <td>Bimestre</td>
+            <td>Miguel Hernández</td>
+          </tr>
+          <tr>
+            <td>Filosofía</td>
+            <td>3.8</td>
+            <td>Bimestre</td>
+            <td>Carlos Antonio Pérez</td>
+          </tr>
+          <tr>
+            <td>Idiomas</td>
+            <td>3.9</td>
+            <td>Bimestre</td>
+            <td>Frank Pearl</td>
+          </tr>
+        </table>
 
-          <input type="submit" value="Imprimir" /><br /><br />
+        <br /><br />
+        <label><strong>¿Desea imprimir el reporte?</strong></label
+        ><br /><br />
+        <input type="radio" id="Sí" name="Sí" value="Sí" />
+        <label for="Sí">Sí</label><br />
+        <input type="radio" id="No" name="Sí" value="No" />
+        <label for="No">No</label><br /><br />
 
-          <label for="comentario"><strong>Comentario:</strong></label><br />
-          <textarea id="comentario" name="comentario" rows="2" cols="40">
-                  </textarea>
-          <br /><br />
-        </form>
-      </section>
+        <input type="submit" value="Imprimir" /><br /><br /><br>
+
+        <label for="comentario"><strong>Comentario:</strong></label
+        ><br />
+        <textarea id="comentario" name="comentario" rows="2" cols="40">
+        </textarea>
+        <br /><br />
+      </form>
     </main>
     <footer class="footer">
-      <p>Todos los derechos reservador &copy; 2021 - SysEducativo</p>
+      <p>Todos los derechos reservados &copy; 2021 - SysEducativo</p>
     </footer>
   </div>
   <script src="../../js/global.js"></script>

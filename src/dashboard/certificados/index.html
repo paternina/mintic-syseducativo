@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
   </head>
+
   <body>
     <div class="wrapper">
       <nav class="navbar">
@@ -40,20 +41,20 @@
           <p class="menu-label">General</p>
           <ul class="menu-list">
               <li class="menu-item"><a href="#">Dashboard</a></li>
-              <li class="menu-item"><a href="../materias/materias.html">Materias</a></li>
-              <li class="menu-item"><a href="../notas/index.html">Notas</a></li>
+              <li class="menu-item"><a href="../materias/materias.html">Materias</a></li>           
               <li class="menu-item"><a href="../users/index.html">Usuarios</a></li>
           </ul>
           <p class="menu-label">Adiministración</p>
           <ul class="menu-list">
-              <li class="menu-item"><a href="#">Profesores</a></li>
-              <li class="menu-item"><a href="#">Estudiantes</a></li>
-              <li class="menu-item"><a href="#">Profesores</a></li>
+              <li class="menu-item"><a href="../profesores/index.html">Profesores</a></li>
+              <li class="menu-item"><a href="../alumnos/alumnos.html">Estudiantes</a></li>
+              <li class="menu-item"><a href="../pagos/index.html">Pagos</a></li>
+              <li class="menu-item"><a href="../certificados/index.html">Certificados</a></li>
           </ul>
           <p class="menu-label">Reportes</p>
           <ul class="menu-list">
-              <li class="menu-item"><a href="#">Notas</a></li>
-              <li class="menu-item"><a href="#">Rendimiento</a></li>
+              <li class="menu-item"><a href="../notas/index.html">Notas</a></li>
+              <li class="menu-item"><a href="../profesores/notasxprofesores.html">Rendimiento</a></li>
           </ul>
           <p class="menu-label">
               Configuración
@@ -67,11 +68,14 @@
               </li>
           </ul>
       </aside>
+
       <main class="main">
           <section class="section">
             <h1>Certificado de Estudios</h1>
+            <br>
             <form method="GET">
               <p><strong>ESTUDIANTE</strong></p>
+              <br>
               <label for="nombre">Nombres: </label>
               <input
                 type="text"
@@ -105,8 +109,9 @@
               <label for="mañana">Mañana</label><br />
               <input type="radio" id="tarde" name="mañana" value="tarde" />
               <label for="tarde">Tarde</label><br /><br />
-      
+              <br>
               <p><strong>PERSONA QUIEN SOLICITA</strong></p>
+              <br>
               <label for="nombre">Nombres: </label>
               <input
                 type="text"
@@ -139,11 +144,12 @@
               <label for="Sí">Sí</label><br />
               <input type="radio" id="No" name="Sí" value="No" />
               <label for="No">No</label><br /><br />
-      
+                
               <label for="grado">Grado Solicitado</label>
               <input type="number" id="grado" name="grado" step="any" /><br /><br />
-      
+              <br>
               <p><strong>PROCESO DE PAGO</strong></p>
+              <br>
               <label
                 >El costo del Certificado de Estudios es de $15.000 ¿Desea
                 continuar?</label
@@ -153,6 +159,7 @@
               <input type="radio" id="No" name="Sí" value="No" />
               <label for="No">No</label><br /><br />
       
+              <br>
               <label for="tipoPago">Forma de Pago: </label><br />
               <select id="tipoPago" name="tipoPago" multiple="true">
                 <option value="pse">PSE</option>
@@ -176,7 +183,7 @@
           </section>
       </main>
       <footer class="footer">
-          <p>Todos los derechos reservador &copy; 2021 - SysEducativo</p>
+          <p>Todos los derechos reservados &copy; 2021 - SysEducativo</p>
       </footer>
   </div>
   <script src="../../js/global.js"></script>
