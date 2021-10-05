@@ -371,15 +371,15 @@ table {
 }
 
 table thead tr {
-  /*background-color: var(--primary);
-  color: #fff;*/
+  background-color: var(--bg-color);
+  color: var(--text-color);
   text-align: left;
   font-weight: bold;
 }
 
-/*table tbody tr:last-of-type {
-  border-bottom: 2px solid var(--primary);
-}*/
+/* table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--bg-color);
+} */
 
 thead, tbody {
   width: 100%;
@@ -405,6 +405,13 @@ table tbody tr.active {
 
 .modal {
   display: none;
+}
+
+.button {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 0.5rem;
+  border-radius: 6px;
 }
 
 @media screen and (min-width: 1024px) {
