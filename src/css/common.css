@@ -439,6 +439,13 @@ table tbody tr.active {
   cursor: pointer;
 }
 
+.button {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
 @media screen and (min-width: 1024px) {
   .navbar-left, .navbar-right {
         gap: var(--padding);
