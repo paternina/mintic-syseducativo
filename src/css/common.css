@@ -426,7 +426,7 @@ table tbody tr.active {
 .modal-body {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
+  padding: 2rem;
   width: 95%;
   border-radius: var(--border-radius);
 }
@@ -476,9 +476,7 @@ table tbody tr.active {
 }
 
 form {
-  padding: var(--padding);
   width: 100%;
-  margin: auto;
 }
 
 form .field {
