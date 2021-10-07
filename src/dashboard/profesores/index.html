@@ -72,116 +72,116 @@
 		<main class="main">
 			<section class="section">
 				<!-- CONTENIDO -->
-
-				<h1 align="center">Administración de Profesores</h1>
+				<button type="button" class="button modal-trigger" data-target="modal-profesores">Nuevo
+					Profesor</button>
 				<div class="table">
 					<table align="center">
-						<tr>
-							<th>
-								Nombre
-							</th>
-							<th>
-								Correo
-							</th>
-							<th>
-								Telefono
-							</th>
-							<th>
-								Accion
-							</th>
-						</tr>
-						<tr>
-							<td>
-								Daniel Perea Murillo
-							</td>
-							<td>
-								dmurilo@colegiosyseducativo.edu.co
-							</td>
-							<td>
-								3123148810
-							</td>
-							<td>
-								<button type="button">Actualizar</button> <button type="button"
-									onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								Francisco Mena
-							</td>
-							<td>
-								fmena@colegiosyseducativo.edu.co
-							</td>
-							<td>
-								3163861673
-							</td>
-							<td>
-								<button type="button">Actualizar</button> <button type="button"
-									onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								Victor Mora Patiño
-							</td>
-							<td>
-								vmora@colegiosyseducativo.edu.co
-							</td>
-							<td>
-								3454545
-							</td>
-							<td>
-								<button type="button">Actualizar</button> <button type="button"
-									onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
-							</td>
-						</tr>
+						<thead>
+							<tr>
+								<th>
+									Nombre
+								</th>
+								<th>
+									Correo
+								</th>
+								<th>
+									Telefono
+								</th>
+								<th>
+									Accion
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									Daniel Perea Murillo
+								</td>
+								<td>
+									dmurilo@colegiosyseducativo.edu.co
+								</td>
+								<td>
+									3123148810
+								</td>
+								<td>
+									<div class="button-group">
+										<button class="button" type="button">Actualizar</button>\
+										<button class="button" type="button"
+											onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Francisco Mena
+								</td>
+								<td>
+									fmena@colegiosyseducativo.edu.co
+								</td>
+								<td>
+									3163861673
+								</td>
+								<td>
+									<div class="button-group">
+										<button class="button" type="button">Actualizar</button>
+										<button class="button" type="button"
+											onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Victor Mora Patiño
+								</td>
+								<td>
+									vmora@colegiosyseducativo.edu.co
+								</td>
+								<td>
+									3454545
+								</td>
+								<td>
+									<div class="button-group">
+										<button class="button" type="button">Actualizar</button>
+										<button class="button" type="button"
+											onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
-				<br />
-				<div align="center">
-					<button type="button">Nuevo Profesor</button>
-				</div>
-				<br />
-				<div class="table">
-					<table align="center">
-						<tr align="left">
-							<th>
-								Nombre
-							</th>
-							<th align="left">
+
+				<div class="modal" id="modal-profesores">
+					<div class="modal-body">
+						<span class="modal-close">&times</span>
+						<h1 class="text-center">Nuevo Profesor</h1>
+						<form action="#">
+							<div class="field">
+								<label for="nombrep">Nombre</label>
 								<input type="text" id="nombrep" name="nombrep" required minlength="4" maxlength="80"
 									size="100">
-							</th>
-						</tr>
-						<tr>
-							<th>
-								Correo
-							</th>
-							<th align="left">
+							</div>
+							<div class="field">
+								<label for="correop">Correo</label>
 								<input type="text" id="correop" name="correop" required minlength="4" maxlength="60"
 									size="80">
-							</th>
-						</tr>
-						<tr>
-							<th>
-								Telefono
-							</th>
-							<th align="left">
+							</div>
+							<div class="field">
+								<label for="telefonop">Telefono</label>
 								<input type="number" id="telefonop" name="telefonop" required minlength="9"
 									maxlength="15" size="15">
-							</th>
-						</tr>
-					</table>
+							</div>
+							<div class="button-group">
+								<button type="button" class="button"
+									onclick="if (!confirm('¿Esta seguro de Guardar este registro?')) {return false};">Guardar</button>
+
+								<button type="button" class="button">Cancelar</button>
+							</div>
+						</form>
+					</div>
 				</div>
 
-				<div align="center">
-					<button type="button"
-						onclick="if (!confirm('¿Esta seguro de Guardar este registro?')) {return false};">Guardar</button>
-				</div>
 
-				<div align="center">
-					<button type="button">Cancelar</button>
-				</div>
 
 			</section>
 		</main>
