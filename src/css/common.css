@@ -458,12 +458,15 @@ table tbody tr.active {
   cursor: pointer;
 }
 
-.button {
-  background-color: var(--bg-color);
+.button-default {
+  background-color: transparent;
   color: var(--text-color);
-  padding: 0.5rem;
-  border: none;
-  border-radius: var(--border-radius);
+}
+
+.button-default:hover {
+  color: var(--text-muted);
+  text-decoration: underline;
+  transform: scale(1.05);
 }
 
 .text-center {
