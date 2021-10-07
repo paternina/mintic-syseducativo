@@ -73,37 +73,66 @@
             <section class="section">
                 <!-- CONTENIDO -->
                 <h1>REGISTRO DE ALUMNOS</h1><br>
-                <label>Tipo Documento: </label>
-                <select>
-                    <option>Cedula Ciudadania</option>
-                    <option>Tarjeta Identidad</option>
-                    <option selected>Registro Civil</option>
-                </select><br><br>
-                <label>Numero de Documento: </label>
-                <input type="number"><br><br>
-                <label>Nombres: </label>
-                <input type="text"><br><br>
-                <label>Apellidos: </label>
-                <input type="text"><br><br>
-                <label>Genero: </label><br><br>
-                <input type="radio" name="genero" /><label>Femenino </label>
-                <input type="radio" name="genero" /><label>Masculino </label>
-                <br><br>
-                <br>
-                <label>Curso: </label>
-                <select>
-                    <option selected>Primero</option>
-                    <option>Segundo</option>
-                    <option>Tercero</option>
-                    <option>Cuarto</option>
-                    <option>Quinto</option>
-                    <option>Sexto</option>
-                    <option>Septimo</option>
-                    <option>Octavo</option>
-                    <option>Noveno</option>
-                    <option>Decimo</option>
-                    <option>Undecimo</option>
-                </select><br><br>
+                <form action="#">
+                    <div class="field">
+                        <label>Tipo Documento</label>
+                        <select>
+                            <option>Cedula Ciudadania</option>
+                            <option>Tarjeta Identidad</option>
+                            <option selected>Registro Civil</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Numero de Documento: </label>
+                        <input type="number">
+                    </div>
+                    <div class="field">
+                        <label>Nombres: </label>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <label>Apellidos: </label>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <label>Genero: </label>
+                        <div class="radio-group">
+                            <span>
+                                <input type="radio" name="genero" id="femenino" />
+                                <label for="femenino"> Femenino</label>
+                            </span>
+                            <span>
+                                <input type="radio" name="genero" id="masculino" />
+                                <label for="masculino"> Masculino</label>
+                            </span>
+
+                        </div>
+
+                    </div>
+                    <div class="field">
+                        <label>Curso: </label>
+                        <select>
+                            <option selected>Primero</option>
+                            <option>Segundo</option>
+                            <option>Tercero</option>
+                            <option>Cuarto</option>
+                            <option>Quinto</option>
+                            <option>Sexto</option>
+                            <option>Septimo</option>
+                            <option>Octavo</option>
+                            <option>Noveno</option>
+                            <option>Decimo</option>
+                            <option>Undecimo</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <div class="button-group">
+                            <input type="submit" class="button" value="Registrar" />
+                            <button class="button">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+
             </section>
         </main>
         <footer class="footer">
