@@ -1,0 +1,38 @@
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-areas: "navbar navbar"
+                             "main main"
+                             "footer footer";
+        grid-template-columns: 1fr 120px;
+        grid-template-rows: 60px 1fr 40px;
+    }
+
+    .navbar {
+        grid-area: navbar;
+        padding: 0 var(--padding);
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .navbar-menu {
+        display: flex;
+        gap: var(--padding);
+    }
+    .navbar-menu .navbar-item {
+        padding: 0;
+    }
+
+    .navbar-menu li, .navbar-menu li a{
+        padding: 0;
+        height: 100%;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+}

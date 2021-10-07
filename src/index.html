@@ -1,28 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="theme-light">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SysEducativo</title>
-  <link rel="stylesheet" href="/css/global.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Template</title>
+  <link rel="stylesheet" href="../src/css/common.css">
+  <link rel="stylesheet" href="../src/css/website.css">
 </head>
 
 <body>
-  <nav class="navbar">
-    <ul class="menu">
-      <li class="menu-link"><a href="#">Conocenos</a></li>
-      <li class="menu-link"><a href="#">Contactanos</a></li>
-      <li class="menu-link">
-        <a href="./auth/login.html">Iniciar Sesion</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="container">
-    <h1>Bienvenidos a la institucion educativa SysEducativa</h1>
+  <div class="wrapper">
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="toggle" data-target="navbar-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="brand">
+          SysEducativo
+        </div>
+        <ul id="navbar-menu" class="navbar-menu">
+          <li class="navbar-item"><a href="">Conocenos</a></li>
+          <li class="navbar-item"><a href="">Contactanos</a></li>
+          <li class="navbar-item"><a href="">Opcion</a></li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <a class="navbar-item" href="./auth/login.html">Auth</a>
+        <div class="dropdown">
+          <a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="user-dropdown">
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Configuración</a></li>
+            <li><a href="#">Salir</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main">
+      <div class="section">
+        <h1>SysEducativo</h1>
+        <h2>Elfuturo del aprendizaje</h2>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Todos los derechos reservador &copy; 2021 - SysEducativo</p>
+    </footer>
   </div>
-  <script src="/js/global.js"></script>
+
+  <script src="./js/global.js"></script>
 </body>
 
 </html>
