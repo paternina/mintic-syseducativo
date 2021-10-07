@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Open Modal
+
     if ($modalTriggers.length > 0) {
         $modalTriggers.forEach(el => {
             el.addEventListener('click', () => {
@@ -33,6 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 $target.classList.add('is-active');
             })
         })
+    }
+
+    window.onclick = function (event) {
+        // Close Modal if we click outside de modal-body
+        if (event.target.classList.contains('modal')) {
+            event.target.classList.toggle('is-active')
+        }
+        // Close Modal if we click the X button in the modal
+
+        if (event.target.classList.contains('modal-close')) {
+            event.target.parentNode.parentNode.classList.toggle('is-active')
+        }
     }
 
 });
