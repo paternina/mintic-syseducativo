@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -41,7 +42,7 @@
       <p class="menu-label">General</p>
       <ul class="menu-list">
         <li class="menu-item"><a href="../index.html">Dashboard</a></li>
-        <li class="menu-item"><a href="../materias/index.html">Materias</a></li>      
+        <li class="menu-item"><a href="../materias/index.html">Materias</a></li>
         <li class="menu-item"><a href="../users/index.html">Usuarios</a></li>
       </ul>
       <p class="menu-label">Adiministración</p>
@@ -77,30 +78,17 @@
         <p><strong>ESTUDIANTE</strong></p>
         <br>
         <label for="nombre">Nombres: </label>
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          placeholder="Escriba el/los nombre(s) del estudiante"
-          required="true"/>
+        <input type="text" id="nombre" name="nombre" placeholder="Escriba el/los nombre(s) del estudiante"
+          required="true" />
         <br /><br />
 
         <label for="apellido">Apellidos: </label>
-        <input
-          type="text"
-          id="apellido"
-          name="apellido"
-          placeholder="Escriba el/los apellido(s) del estudiante"
-          required/>
+        <input type="text" id="apellido" name="apellido" placeholder="Escriba el/los apellido(s) del estudiante"
+          required />
         <br /><br />
 
         <label for="grado">Grado</label>
-        <input
-          type="number"
-          id="grado"
-          name="grado"
-          step="any"
-          required/>
+        <input type="number" id="grado" name="grado" step="any" required />
         <br /><br /><br />
 
         <label><strong>¿Desea un reporte general o por materia?</strong></label>
@@ -121,8 +109,9 @@
           <option value="fisica">Física</option>
           <option value="matematicasI">Matemáticas I</option>
           <option value="matematicasII">Matemáticas II</option>
-          <option value="quimica">Química</option></select>
-          <br /><br /><br>
+          <option value="quimica">Química</option>
+        </select>
+        <br /><br /><br>
 
         <label><strong>Periodo a consultar:</strong></label>
         <br /><br />
@@ -135,36 +124,38 @@
 
         <input type="submit" value="consultar" /><br /><br />
 
-        <table class="default">
-          <tr>
-            <th>Materia</th>
-            <th>Nota</th>
-            <th>Periodo</th>
-            <th>Docente</th>
-          </tr>
-          <tr>
-            <td>Analítica</td>
-            <td align = "center">4.5</td>
-            <td align = "center"> Bimestre</td>
-            <td align = "center">Miguel Hernández</td>
-          </tr>
-          <tr>
-            <td>Filosofía</td>
-            <td align = "center">3.8</td>
-            <td align = "center">Bimestre</td>
-            <td align = "center">Carlos Antonio Pérez</td>
-          </tr>
-          <tr>
-            <td>Idiomas</td>
-            <td align = "center">3.9</td>
-            <td align = "center">Bimestre</td>
-            <td align = "center">Frank Pearl</td>
-          </tr>
-        </table>
+        <div class="table">
+
+          <table class="default">
+            <tr>
+              <th>Materia</th>
+              <th>Nota</th>
+              <th>Periodo</th>
+              <th>Docente</th>
+            </tr>
+            <tr>
+              <td>Analítica</td>
+              <td align="center">4.5</td>
+              <td align="center"> Bimestre</td>
+              <td align="center">Miguel Hernández</td>
+            </tr>
+            <tr>
+              <td>Filosofía</td>
+              <td align="center">3.8</td>
+              <td align="center">Bimestre</td>
+              <td align="center">Carlos Antonio Pérez</td>
+            </tr>
+            <tr>
+              <td>Idiomas</td>
+              <td align="center">3.9</td>
+              <td align="center">Bimestre</td>
+              <td align="center">Frank Pearl</td>
+            </tr>
+          </table>
+        </div>
 
         <br /><br />
-        <label><strong>¿Desea imprimir el reporte?</strong></label
-        ><br /><br />
+        <label><strong>¿Desea imprimir el reporte?</strong></label><br /><br />
         <input type="radio" id="Sí" name="Sí" value="Sí" />
         <label for="Sí">Sí</label><br />
         <input type="radio" id="No" name="Sí" value="No" />
@@ -172,8 +163,7 @@
 
         <input type="submit" value="Imprimir" /><br /><br /><br>
 
-        <label for="comentario"><strong>Comentario:</strong></label
-        ><br />
+        <label for="comentario"><strong>Comentario:</strong></label><br />
         <textarea id="comentario" name="comentario" rows="2" cols="40">
         </textarea>
         <br /><br />

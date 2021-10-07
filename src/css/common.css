@@ -362,6 +362,7 @@ Table
 
 .table {
   width: 100%;
+  overflow-x: auto;
 }
 
 table {
@@ -443,7 +444,14 @@ table tbody tr.active {
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 0.5rem;
+  border: none;
   border-radius: 6px;
+}
+
+
+.button-group {
+  display: flex;
+  gap: 0.25rem;
 }
 
 @media screen and (min-width: 1024px) {

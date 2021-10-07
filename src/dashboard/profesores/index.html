@@ -74,102 +74,105 @@
 				<!-- CONTENIDO -->
 
 				<h1 align="center">Administración de Profesores</h1>
-
-				<table align="center">
-					<tr>
-						<th>
-							Nombre
-						</th>
-						<th>
-							Correo
-						</th>
-						<th>
-							Telefono
-						</th>
-						<th>
-							Accion
-						</th>
-					</tr>
-					<tr>
-						<td>
-							Daniel Perea Murillo
-						</td>
-						<td>
-							dmurilo@colegiosyseducativo.edu.co
-						</td>
-						<td>
-							3123148810
-						</td>
-						<td>
-							<button type="button">Actualizar</button> <button type="button"
-								onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Francisco Mena
-						</td>
-						<td>
-							fmena@colegiosyseducativo.edu.co
-						</td>
-						<td>
-							3163861673
-						</td>
-						<td>
-							<button type="button">Actualizar</button> <button type="button"
-								onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Victor Mora Patiño
-						</td>
-						<td>
-							vmora@colegiosyseducativo.edu.co
-						</td>
-						<td>
-							3454545
-						</td>
-						<td>
-							<button type="button">Actualizar</button> <button type="button"
-								onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
-						</td>
-					</tr>
-				</table>
+				<div class="table">
+					<table align="center">
+						<tr>
+							<th>
+								Nombre
+							</th>
+							<th>
+								Correo
+							</th>
+							<th>
+								Telefono
+							</th>
+							<th>
+								Accion
+							</th>
+						</tr>
+						<tr>
+							<td>
+								Daniel Perea Murillo
+							</td>
+							<td>
+								dmurilo@colegiosyseducativo.edu.co
+							</td>
+							<td>
+								3123148810
+							</td>
+							<td>
+								<button type="button">Actualizar</button> <button type="button"
+									onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Francisco Mena
+							</td>
+							<td>
+								fmena@colegiosyseducativo.edu.co
+							</td>
+							<td>
+								3163861673
+							</td>
+							<td>
+								<button type="button">Actualizar</button> <button type="button"
+									onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Victor Mora Patiño
+							</td>
+							<td>
+								vmora@colegiosyseducativo.edu.co
+							</td>
+							<td>
+								3454545
+							</td>
+							<td>
+								<button type="button">Actualizar</button> <button type="button"
+									onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+							</td>
+						</tr>
+					</table>
+				</div>
 				<br />
 				<div align="center">
 					<button type="button">Nuevo Profesor</button>
 				</div>
 				<br />
-				<table align="center">
-					<tr align="left">
-						<th>
-							Nombre
-						</th>
-						<th align="left">
-							<input type="text" id="nombrep" name="nombrep" required minlength="4" maxlength="80"
-								size="100">
-						</th>
-					</tr>
-					<tr>
-						<th>
-							Correo
-						</th>
-						<th align="left">
-							<input type="text" id="correop" name="correop" required minlength="4" maxlength="60"
-								size="80">
-						</th>
-					</tr>
-					<tr>
-						<th>
-							Telefono
-						</th>
-						<th align="left">
-							<input type="number" id="telefonop" name="telefonop" required minlength="9" maxlength="15"
-								size="15">
-						</th>
-					</tr>
-				</table>
+				<div class="table">
+					<table align="center">
+						<tr align="left">
+							<th>
+								Nombre
+							</th>
+							<th align="left">
+								<input type="text" id="nombrep" name="nombrep" required minlength="4" maxlength="80"
+									size="100">
+							</th>
+						</tr>
+						<tr>
+							<th>
+								Correo
+							</th>
+							<th align="left">
+								<input type="text" id="correop" name="correop" required minlength="4" maxlength="60"
+									size="80">
+							</th>
+						</tr>
+						<tr>
+							<th>
+								Telefono
+							</th>
+							<th align="left">
+								<input type="number" id="telefonop" name="telefonop" required minlength="9"
+									maxlength="15" size="15">
+							</th>
+						</tr>
+					</table>
+				</div>
 
 				<div align="center">
 					<button type="button"

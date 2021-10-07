@@ -76,112 +76,116 @@
 				<h1 align="center">Notas por Profesor</h1> <br />
 				<h2 align="center">Daniel Perea Murillo</h2> <br />
 
-				<table align="center">
-					<tr align="left">
-						<th>
-							Curso
-						</th>
-						<th align="left">
-							<select>
-								<option value="" disabled>seleccione un curso</option>
-								<option value="1a">1a</option>
-								<option value="2a">2a</option>
-								<option value="2b">2b</option>
-								<option value="3a">3a</option>
-							</select>
-						</th>
-					</tr>
-					<tr>
-						<th>
-							Materia
-						</th>
-						<th align="left">
-							<select>
-								<option value="" disabled>seleccione un curso</option>
-								<option value="Biologia">Biologia</option>
-								<option value="Matematicas">Matematicas</option>
-								<option value="Fisica">Fisica</option>
-								<option value="Quimica">Quimica</option>
-							</select>
-						</th>
-					</tr>
-				</table>
-
+				<div class="table">
+					<table align="center">
+						<tr align="left">
+							<th>
+								Curso
+							</th>
+							<th align="left">
+								<select>
+									<option value="" disabled>seleccione un curso</option>
+									<option value="1a">1a</option>
+									<option value="2a">2a</option>
+									<option value="2b">2b</option>
+									<option value="3a">3a</option>
+								</select>
+							</th>
+						</tr>
+						<tr>
+							<th>
+								Materia
+							</th>
+							<th align="left">
+								<select>
+									<option value="" disabled>seleccione un curso</option>
+									<option value="Biologia">Biologia</option>
+									<option value="Matematicas">Matematicas</option>
+									<option value="Fisica">Fisica</option>
+									<option value="Quimica">Quimica</option>
+								</select>
+							</th>
+						</tr>
+					</table>
+				</div>
 				<br />
-
-				<table align="center">
-					<tr>
-						<th>
-							Nombre del Estudiante
-						</th>
-						<th>
-							Nota
-						</th>
-						<th>
-							Accion
-						</th>
-					</tr>
-					<tr>
-						<td>
-							Daniel Arturo Dominguez
-						</td>
-						<td>
-							4.5
-						</td>
-						<td>
-							<button type="button">Actualizar</button> <button type="button"
-								onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
-							<button type="button">Nueva Nota</button>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Francisco Rodriguez Diaz
-						</td>
-						<td>
-							3.2
-						</td>
-						<td>
-							<button type="button">Actualizar</button> <button type="button"
-								onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
-							<button type="button">Nueva Nota</button>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Victor Mora Patiño
-						</td>
-						<td>
-							4.7
-						</td>
-						<td>
-							<button type="button">Actualizar</button> <button type="button"
-								onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
-							<button type="button">Nueva Nota</button>
-						</td>
-					</tr>
-				</table>
+				<div class="table">
+					<table align="center">
+						<tr>
+							<th>
+								Nombre del Estudiante
+							</th>
+							<th>
+								Nota
+							</th>
+							<th>
+								Accion
+							</th>
+						</tr>
+						<tr>
+							<td>
+								Daniel Arturo Dominguez
+							</td>
+							<td>
+								4.5
+							</td>
+							<td>
+								<button type="button">Actualizar</button> <button type="button"
+									onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+								<button type="button">Nueva Nota</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Francisco Rodriguez Diaz
+							</td>
+							<td>
+								3.2
+							</td>
+							<td>
+								<button type="button">Actualizar</button> <button type="button"
+									onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+								<button type="button">Nueva Nota</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Victor Mora Patiño
+							</td>
+							<td>
+								4.7
+							</td>
+							<td>
+								<button type="button">Actualizar</button> <button type="button"
+									onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+								<button type="button">Nueva Nota</button>
+							</td>
+						</tr>
+					</table>
+				</div>
 				<br />
-				<table align="center">
-					<tr align="left">
-						<th>
-							Nombre
-						</th>
-						<th align="left">
-							<input type="text" id="nombrea" name="nombrea" required minlength="4" maxlength="80"
-								size="100" disabled="yes">
-						</th>
-					</tr>
-					<tr>
-						<th>
-							Nota
-						</th>
-						<th align="left">
-							<input type="number" step="any" id="nota" name="nota" required minlength="1" maxlength="4"
-								size="5">
-						</th>
-					</tr>
-				</table>
+				<div class="table">
+					<table align="center">
+						<tr align="left">
+							<th>
+								Nombre
+							</th>
+							<th align="left">
+								<input type="text" id="nombrea" name="nombrea" required minlength="4" maxlength="80"
+									size="100" disabled="yes">
+							</th>
+						</tr>
+						<tr>
+							<th>
+								Nota
+							</th>
+							<th align="left">
+								<input type="number" step="any" id="nota" name="nota" required minlength="1"
+									maxlength="4" size="5">
+							</th>
+						</tr>
+					</table>
+				</div>
 
 				<div align="center">
 					<button type="button"
