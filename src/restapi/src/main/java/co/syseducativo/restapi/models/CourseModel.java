@@ -20,7 +20,7 @@ public class CourseModel {
     private String name;
     private ArrayList<SubjectModel> subjects;
     @Column(name = "is_active", columnDefinition = "Boolean default true")
-    private boolean isActive;
+    private boolean isActive = true;
 
     public Long getId() {
         return id;

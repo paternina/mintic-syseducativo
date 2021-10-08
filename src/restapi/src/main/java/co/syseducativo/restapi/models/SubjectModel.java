@@ -18,7 +18,7 @@ public class SubjectModel { // Clase Materias
     @Column(unique = true, nullable = false)
     private String name;
     @Column(name = "is_active", columnDefinition = "Boolean default true")
-    private boolean isActive;
+    private boolean isActive = true;
 
     public long getId() {
         return id;

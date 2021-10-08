@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,8 +16,11 @@ public class NoteModel {
     @Column(unique = true, nullable = false)
     private long id;
     private float value;
+    @OneToOne
     private SubjectModel subject;
+    @OneToOne
     private StudentModel estudent;
+    @OneToOne
     private TeacherModel teacher;
 
     public long getId() {

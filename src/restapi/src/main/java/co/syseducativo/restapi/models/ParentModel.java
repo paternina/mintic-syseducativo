@@ -19,7 +19,7 @@ public class ParentModel extends UserModel {
 
     private ArrayList<StudentModel> childrens;
     @Column(name = "is_active", columnDefinition = "Boolean default true")
-    private boolean isActive;
+    private boolean isActive = true;
 
     public Long getId() {
         return id;

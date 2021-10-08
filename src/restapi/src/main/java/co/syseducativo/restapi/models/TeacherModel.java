@@ -20,7 +20,7 @@ public class TeacherModel extends UserModel {
     private ArrayList<SubjectModel> subjects;
     private ArrayList<CourseModel> courses;
     @Column(name = "is_active", columnDefinition = "Boolean default true")
-    private boolean isActive;
+    private boolean isActive = true;
 
     public Long getId() {
         return id;

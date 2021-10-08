@@ -15,7 +15,7 @@ public class CoordinatorModel {
     @Column(unique = true, nullable = false)
     private Long id;
     @Column(name = "is_active", columnDefinition = "Boolean default true")
-    private boolean isActive;
+    private boolean isActive = true;
 
     public Long getId() {
         return id;
