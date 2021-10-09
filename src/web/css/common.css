@@ -370,7 +370,6 @@ Table
 
 table {
   width: 100%;
-  border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
   border-radius: 5px 5px 0 0;
@@ -486,6 +485,7 @@ form {
 }
 
 form .field {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -502,6 +502,21 @@ form .field input:focus, form .field select:focus  {
   outline:1px solid #f1f1f1;
 }
 
+.title {
+  font-size: var(--title-zise);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.form-section-title {
+  padding: 0.75rem 0.5rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+  background-color: #dfdfdf;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
 @media screen and (min-width: 1024px) {
   .navbar-left, .navbar-right {
         gap: var(--padding);
@@ -511,7 +526,8 @@ form .field input:focus, form .field select:focus  {
       width: 70%;
     }
 
-    form {
+    .form-md {
       width: 80%;
+      margin: auto;
     }
 }

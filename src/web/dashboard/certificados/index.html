@@ -1,192 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Syseducativo</title>
-    <link rel="stylesheet" href="../../css/common.css">
-    <link rel="stylesheet" href="../../css/dashboard.css">
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <nav class="navbar">
-          <div class="navbar-left">
-              <div class="toggle" data-target="aside-menu">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-              </div>
-              <div class="brand">
-                  SysEducativo
-              </div>
-              <span class="search">
-                  <input type="text" placeholder="Search">
-              </span>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syseducativo</title>
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="toggle" data-target="aside-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="brand">
+          SysEducativo
+        </div>
+        <span class="search">
+          <input type="text" placeholder="Search">
+        </span>
+      </div>
+
+      <div class="navbar-right">
+        <div class="dropdown">
+          <a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="user-dropdown">
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Configuración</a></li>
+            <li><a href="#">Salir</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <aside id="aside-menu" class="menu">
+      <p class="menu-label">General</p>
+      <ul class="menu-list">
+        <li class="menu-item"><a href="../index.html">Dashboard</a></li>
+        <li class="menu-item"><a href="../materias/index.html">Materias</a></li>
+        <li class="menu-item"><a href="../users/index.html">Usuarios</a></li>
+      </ul>
+      <p class="menu-label">Adiministración</p>
+      <ul class="menu-list">
+        <li class="menu-item"><a href="../profesores/index.html">Profesores</a></li>
+        <li class="menu-item"><a href="../alumnos/index.html">Estudiantes</a></li>
+        <li class="menu-item"><a href="../pagos/index.html">Pagos</a></li>
+        <li class="menu-item"><a href="../certificados/index.html">Certificados</a></li>
+      </ul>
+      <p class="menu-label">Reportes</p>
+      <ul class="menu-list">
+        <li class="menu-item"><a href="../notas/index.html">Notas</a></li>
+        <li class="menu-item"><a href="../profesores/notasxprofesores.html">Rendimiento</a></li>
+      </ul>
+      <p class="menu-label">
+        Configuración
+      </p>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+          </label>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <section class="section">
+        <h1 class="title">Certificado de Estudios</h1>
+
+        <form method="GET">
+          <p class="form-section-title">Estudiante</p>
+          <div class="field">
+            <label for="grado">Grado</label>
+            <input type="text" name="grado" id="id" value="6a" readonly disabled>
+          </div>
+          <div class="field">
+            <label for="nombre">Nombres: </label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escriba el/los nombre(s) del estudiante"
+              required="true" />
+          </div>
+          <div class="field">
+            <label for="apellido">Apellidos: </label>
+            <input type="text" id="apellido" name="apellido" placeholder="Escriba el/los apellido(s) del estudiante"
+              required />
           </div>
 
-          <div class="navbar-right">
-              <div class="dropdown">
-                  <a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
-                  <ul class="dropdown-menu" id="user-dropdown">
-                      <li><a href="#">Perfil</a></li>
-                      <li><a href="#">Configuración</a></li>
-                      <li><a href="#">Salir</a></li>
-                  </ul>
-              </div>
+          <div class="field">
+            <label>Jornada</label>
+            <div class="radio-group">
+              <input type="radio" id="mañana" name="jornada" value="mañana" />
+              <label for="mañana">Mañana</label>
+              <input type="radio" id="tarde" name="jornada" value="tarde" />
+              <label for="tarde">Tarde</label>
+            </div>
           </div>
-      </nav>
-      <aside id="aside-menu" class="menu">
-          <p class="menu-label">General</p>
-          <ul class="menu-list">
-              <li class="menu-item"><a href="../index.html">Dashboard</a></li>
-              <li class="menu-item"><a href="../materias/index.html">Materias</a></li>           
-              <li class="menu-item"><a href="../users/index.html">Usuarios</a></li>
-          </ul>
-          <p class="menu-label">Adiministración</p>
-          <ul class="menu-list">
-              <li class="menu-item"><a href="../profesores/index.html">Profesores</a></li>
-              <li class="menu-item"><a href="../alumnos/index.html">Estudiantes</a></li>
-              <li class="menu-item"><a href="../pagos/index.html">Pagos</a></li>
-              <li class="menu-item"><a href="../certificados/index.html">Certificados</a></li>
-          </ul>
-          <p class="menu-label">Reportes</p>
-          <ul class="menu-list">
-              <li class="menu-item"><a href="../notas/index.html">Notas</a></li>
-              <li class="menu-item"><a href="../profesores/notasxprofesores.html">Rendimiento</a></li>
-          </ul>
-          <p class="menu-label">
-              Configuración
-          </p>
-          <ul class="menu-list">
-              <li class="menu-item">
-                  <label id="switch" class="switch">
-                      <input type="checkbox" onchange="toggleTheme()" id="slider">
-                      <span class="slider round"></span>
-                  </label>
-              </li>
-          </ul>
-      </aside>
 
-      <main class="main">
-          <section class="section">
-            <h1>Certificado de Estudios</h1>
-            <br>
-            <form method="GET">
-              <p><strong>ESTUDIANTE</strong></p>
-              <br>
-              <label for="nombre">Nombres: </label>
-              <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                placeholder="Escriba el/los nombre(s) del estudiante"
-                required="true"
-              /><br /><br />
-      
-              <label for="apellido">Apellidos: </label>
-              <input
-                type="text"
-                id="apellido"
-                name="apellido"
-                placeholder="Escriba el/los apellido(s) del estudiante"
-                required
-              /><br /><br />
-      
-              <label for="grado">Grado</label>
-              <input
-                type="number"
-                id="grado"
-                name="grado"
-                step="any"
-                required
-              /><br /><br /><br />
-      
-              <label><strong>Jornada</strong></label
-              ><br /><br />
-              <input type="radio" id="mañana" name="mañana" value="mañana" />
-              <label for="mañana">Mañana</label><br />
-              <input type="radio" id="tarde" name="mañana" value="tarde" />
-              <label for="tarde">Tarde</label><br /><br />
-              <br>
-              <p><strong>PERSONA QUIEN SOLICITA</strong></p>
-              <br>
-              <label for="nombre">Nombres: </label>
-              <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                placeholder="Escriba el/los nombre(s) del solicitante"
-                required="true"
-              /><br /><br />
-      
-              <label for="apellido">Apellidos: </label>
-              <input
-                type="text"
-                id="apellido"
-                name="apellido"
-                placeholder="Escriba el/los apellido(s) del solicitante"
-                required
-              /><br /><br />
-      
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Escriba el correo electrónico"
-                required
-              /><br /><br /><br />
-      
-              <label>¿Solicita certificado del grado actual?</label><br /><br />
+          <p class="form-section-title">Persona que solicita</p>
+          <div class="field">
+            <label for="nombre">Nombres: </label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escriba el/los nombre(s) del solicitante"
+              required="true" />
+          </div>
+          <div class="field">
+            <label for="apellido">Apellidos: </label>
+            <input type="text" id="apellido" name="apellido" placeholder="Escriba el/los apellido(s) del solicitante"
+              required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Escriba el correo electrónico" required />
+          </div>
+
+          <div class="field">
+            <label>¿Solicita certificado del grado actual?</label>
+            <div class="radio-group">
+              <input type="radio" id="si" name="esactual" value="Sí" />
+              <label for="si">Sí</label>
+              <input type="radio" id="No" name="esactual" value="No" />
+              <label for="No">No</label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="grado">Grado Solicitado</label>
+            <select name="gradosolicitado" id="grado">
+              <option value="6a">6a</option>
+              <option value="7a">7a</option>
+            </select>
+          </div>
+
+          <p class="form-section-title">Proceso de pago</p>
+          <div class="field">
+            <label>El costo del Certificado de Estudios es de $15.000 ¿Desea
+              continuar?</label>
+            <div class="radio-group">
               <input type="radio" id="Sí" name="Sí" value="Sí" />
-              <label for="Sí">Sí</label><br />
+              <label for="Sí">Sí</label>
               <input type="radio" id="No" name="Sí" value="No" />
-              <label for="No">No</label><br /><br />
-                
-              <label for="grado">Grado Solicitado</label>
-              <input type="number" id="grado" name="grado" step="any" /><br /><br />
-              <br>
-              <p><strong>PROCESO DE PAGO</strong></p>
-              <br>
-              <label
-                >El costo del Certificado de Estudios es de $15.000 ¿Desea
-                continuar?</label
-              ><br /><br />
-              <input type="radio" id="Sí" name="Sí" value="Sí" />
-              <label for="Sí">Sí</label><br />
-              <input type="radio" id="No" name="Sí" value="No" />
-              <label for="No">No</label><br /><br />
-      
-              <br>
-              <label for="tipoPago">Forma de Pago: </label><br />
-              <select id="tipoPago" name="tipoPago" multiple="true">
-                <option value="pse">PSE</option>
-                <option value="tarjetaCredito">Tarjeta de Credito</option>
-                <option value="nequi">Nequi</option>
-                <option value="daviplata">Daviplata</option></select
-              ><br /><br />
-      
-              <label for="comentario">Comentario:</label><br />
-              <textarea id="comentario" name="comentario" rows="2" cols="30">
-              </textarea
-              ><br /><br />
-      
+              <label for="No">No</label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="tipoPago">Forma de Pago: </label>
+            <select id="tipoPago" name="tipoPago">
+              <option value="pse">PSE</option>
+              <option value="tarjetaCredito">Tarjeta de Credito</option>
+              <option value="nequi">Nequi</option>
+              <option value="daviplata">Daviplata</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" name="comentario" cols="30"></textarea>
+          </div>
+
+          <div class="field">
+            <div class="button-group">
               <input type="submit" value="Enviar" />
-              <input
-                type="submit"
-                value="Enviar sin validar"
-                formnovalidate="formnovalidate"
-              />
-            </form>
-          </section>
-      </main>
-      <footer class="footer">
-          <p>Todos los derechos reservados &copy; 2021 - SysEducativo</p>
-      </footer>
+              <input type="submit" value="Enviar sin validar" formnovalidate="formnovalidate" />
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>Todos los derechos reservados &copy; 2021 - SysEducativo</p>
+    </footer>
   </div>
   <script src="../../js/global.js"></script>
   <script src="../../js/dashboard.js"></script>
-  </body>
+</body>
+
 </html>

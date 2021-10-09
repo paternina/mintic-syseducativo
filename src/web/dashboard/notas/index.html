@@ -71,103 +71,122 @@
     </aside>
 
     <main class="main">
-      <br>
-      <h1>Reporte de Notas</h1>
-      <br>
+
+      <h1 class="title">Reporte de Notas</h1>
+
       <form method="GET">
-        <p><strong>ESTUDIANTE</strong></p>
-        <br>
-        <label for="nombre">Nombres: </label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escriba el/los nombre(s) del estudiante"
-          required="true" />
-        <br /><br />
-
-        <label for="apellido">Apellidos: </label>
-        <input type="text" id="apellido" name="apellido" placeholder="Escriba el/los apellido(s) del estudiante"
-          required />
-        <br /><br />
-
-        <label for="grado">Grado</label>
-        <input type="number" id="grado" name="grado" step="any" required />
-        <br /><br /><br />
-
-        <label><strong>¿Desea un reporte general o por materia?</strong></label>
-        <br /><br />
-        <input type="radio" id="general" name="general" value="general" />
-        <label for="general">General</label><br />
-        <input type="radio" id="porMateria" name="general" value="porMateria" />
-        <label for="porMateria">por Materia</label><br /><br /><br>
-
-        <label for="materia"><strong>Seleccione Materia(s): </strong></label>
-        <br /><br />
-        <select id="materia" name="materia" multiple="true">
-          <option value="algebra">Algebra</option>
-          <option value="analitica">Analítica</option>
-          <option value="biologia">Biología</option>
-          <option value="idiomas">Idiomas</option>
-          <option value="filosofia">Filosofía</option>
-          <option value="fisica">Física</option>
-          <option value="matematicasI">Matemáticas I</option>
-          <option value="matematicasII">Matemáticas II</option>
-          <option value="quimica">Química</option>
-        </select>
-        <br /><br /><br>
-
-        <label><strong>Periodo a consultar:</strong></label>
-        <br /><br />
-        <input type="checkbox" id="bimestre" name="bimestre" value="bimestre" />
-        <label for="bimestre">Bimestral</label><br />
-        <input type="checkbox" id="semestre" name="semestre" value="semestre" />
-        <label for="semestre">Semestral</label><br />
-        <input type="checkbox" id="año" name="año" value="año" />
-        <label for="año">Anual</label><br><br><br>
-
-        <input type="submit" value="consultar" /><br /><br />
-
-        <div class="table">
-
-          <table class="default">
-            <tr>
-              <th>Materia</th>
-              <th>Nota</th>
-              <th>Periodo</th>
-              <th>Docente</th>
-            </tr>
-            <tr>
-              <td>Analítica</td>
-              <td align="center">4.5</td>
-              <td align="center"> Bimestre</td>
-              <td align="center">Miguel Hernández</td>
-            </tr>
-            <tr>
-              <td>Filosofía</td>
-              <td align="center">3.8</td>
-              <td align="center">Bimestre</td>
-              <td align="center">Carlos Antonio Pérez</td>
-            </tr>
-            <tr>
-              <td>Idiomas</td>
-              <td align="center">3.9</td>
-              <td align="center">Bimestre</td>
-              <td align="center">Frank Pearl</td>
-            </tr>
-          </table>
+        <p class="form-section-title">ESTUDIANTE</p>
+        <div class="field">
+          <label for="nombre">Nombres: </label>
+          <input type="text" id="nombre" name="nombre" placeholder="Escriba el/los nombre(s) del estudiante"
+            required="true" />
         </div>
-
-        <br /><br />
-        <label><strong>¿Desea imprimir el reporte?</strong></label><br /><br />
-        <input type="radio" id="Sí" name="Sí" value="Sí" />
-        <label for="Sí">Sí</label><br />
-        <input type="radio" id="No" name="Sí" value="No" />
-        <label for="No">No</label><br /><br />
-
-        <input type="submit" value="Imprimir" /><br /><br /><br>
-
-        <label for="comentario"><strong>Comentario:</strong></label><br />
-        <textarea id="comentario" name="comentario" rows="2" cols="40">
-        </textarea>
-        <br /><br />
+        <div class="field">
+          <label for="apellido">Apellidos: </label>
+          <input type="text" id="apellido" name="apellido" placeholder="Escriba el/los apellido(s) del estudiante"
+            required />
+        </div>
+        <div class="field">
+          <label for="grado">Grado</label>
+          <input type="number" id="grado" name="grado" step="any" required />
+        </div>
+        <div class="field">
+          <label>¿Desea un reporte general o por materia?</label>
+          <div class="radio-group">
+            <input type="radio" id="general" name="general" value="general" />
+            <label for="general">General</label>
+            <input type="radio" id="porMateria" name="general" value="porMateria" />
+            <label for="porMateria">por Materia</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="materia">Seleccione Materia(s): </label>
+          <select id="materia" name="materia" multiple="true">
+            <option value="algebra">Algebra</option>
+            <option value="analitica">Analítica</option>
+            <option value="biologia">Biología</option>
+            <option value="idiomas">Idiomas</option>
+            <option value="filosofia">Filosofía</option>
+            <option value="fisica">Física</option>
+            <option value="matematicasI">Matemáticas I</option>
+            <option value="matematicasII">Matemáticas II</option>
+            <option value="quimica">Química</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Periodo a consultar:</label>
+          <div class="radio-group">
+            <input type="checkbox" id="bimestre" name="bimestre" value="bimestre" />
+            <label for="bimestre">Bimestral</label>
+            <input type="checkbox" id="semestre" name="semestre" value="semestre" />
+            <label for="semestre">Semestral</label>
+            <input type="checkbox" id="año" name="año" value="año" />
+            <label for="año">Anual</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="button-group">
+            <input type="submit" value="consultar" class="modal-trigger" data-target="certificadoinfo" />
+          </div>
+        </div>
       </form>
+
+      <div class="modal" id="certificadoinfo">
+        <div class="modal-body">
+          <span class="modal-close">&times</span>
+          <h1 class="text-center">Certificado de Notas</h1>
+          <div class="table">
+            <table class="default">
+              <thead>
+                <tr>
+                  <th>Materia</th>
+                  <th>Nota</th>
+                  <th>Periodo</th>
+                  <th>Docente</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Analítica</td>
+                  <td align="center">4.5</td>
+                  <td align="center"> Bimestre</td>
+                  <td align="center">Miguel Hernández</td>
+                </tr>
+                <tr>
+                  <td>Filosofía</td>
+                  <td align="center">3.8</td>
+                  <td align="center">Bimestre</td>
+                  <td align="center">Carlos Antonio Pérez</td>
+                </tr>
+                <tr>
+                  <td>Idiomas</td>
+                  <td align="center">3.9</td>
+                  <td align="center">Bimestre</td>
+                  <td align="center">Frank Pearl</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <form action="#">
+            <div class="field">
+              <label>¿Desea imprimir el reporte?</label>
+              <div class="radio-group">
+                <input type="radio" id="Sí" name="Sí" value="Sí" />
+                <label for="Sí">Sí</label>
+                <input type="radio" id="No" name="Sí" value="No" />
+                <label for="No">No</label>
+              </div>
+              <div class="field">
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="5"></textarea>
+              </div>
+              <div class="field">
+                <input type="submit" value="Imprimir" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <p>Todos los derechos reservados &copy; 2021 - SysEducativo</p>
