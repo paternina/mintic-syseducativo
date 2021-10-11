@@ -8,7 +8,14 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "note")
 public class NoteModel {
     @Id
@@ -22,45 +29,5 @@ public class NoteModel {
     private StudentModel estudent;
     @OneToOne
     private TeacherModel teacher;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public float getValue() {
-        return value;
-    }
-
-    public void setValue(float value) {
-        this.value = value;
-    }
-
-    public SubjectModel getSubject() {
-        return subject;
-    }
-
-    public void setSubject(SubjectModel subject) {
-        this.subject = subject;
-    }
-
-    public StudentModel getEstudent() {
-        return estudent;
-    }
-
-    public void setEstudent(StudentModel estudent) {
-        this.estudent = estudent;
-    }
-
-    public TeacherModel getTeacher() {
-        return teacher;
-    }
-
-    public void setTeacher(TeacherModel teacher) {
-        this.teacher = teacher;
-    }
 
 }
