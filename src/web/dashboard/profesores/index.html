@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Profesores</title>
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav class="navbar">
+			<div class="navbar-left">
+				<div class="toggle" data-target="aside-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="brand">
+					SysEducativo
+				</div>
+				<span class="search">
+					<input type="text" placeholder="Search">
+				</span>
+			</div>
+
+			<div class="navbar-right">
+				<div class="dropdown">
+					<a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
+					<ul class="dropdown-menu" id="user-dropdown">
+						<li><a href="#">Perfil</a></li>
+						<li><a href="#">Configuración</a></li>
+						<li><a href="#">Salir</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<aside id="aside-menu" class="menu">
+			<p class="menu-label">General</p>
+			<ul class="menu-list">
+				<li class="menu-item"><a href="../index.html">Dashboard</a></li>
+				<li class="menu-item"><a href="../materias/index.html">Materias</a></li>
+				<li class="menu-item"><a href="../users/index.html">Usuarios</a></li>
+			</ul>
+			<p class="menu-label">Adiministración</p>
+			<ul class="menu-list">
+				<li class="menu-item"><a href="../profesores/index.html">Profesores</a></li>
+				<li class="menu-item"><a href="../alumnos/index.html">Estudiantes</a></li>
+				<li class="menu-item"><a href="../pagos/index.html">Pagos</a></li>
+				<li class="menu-item"><a href="../certificados/index.html">Certificados</a></li>
+			</ul>
+			<p class="menu-label">Reportes</p>
+			<ul class="menu-list">
+				<li class="menu-item"><a href="../notas/index.html">Notas</a></li>
+				<li class="menu-item"><a href="../profesores/notasxprofesores.html">Rendimiento</a></li>
+			</ul>
+			<p class="menu-label">
+				Configuración
+			</p>
+			<ul class="menu-list">
+				<li class="menu-item">
+					<label id="switch" class="switch">
+						<input type="checkbox" onchange="toggleTheme()" id="slider">
+						<span class="slider round"></span>
+					</label>
+				</li>
+			</ul>
+		</aside>
+		<main class="main">
+			<section class="section">
+				<!-- CONTENIDO -->
+				<button type="button" class="button modal-trigger" data-target="modal-profesores">Nuevo
+					Profesor</button>
+				<div class="table">
+					<table align="center">
+						<thead>
+							<tr>
+								<th>
+									Nombre
+								</th>
+								<th>
+									Correo
+								</th>
+								<th>
+									Telefono
+								</th>
+								<th>
+									Accion
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									Daniel Perea Murillo
+								</td>
+								<td>
+									dmurilo@colegiosyseducativo.edu.co
+								</td>
+								<td>
+									3123148810
+								</td>
+								<td>
+									<div class="button-group">
+										<button class="button" type="button">Actualizar</button>
+										<button class="button" type="button"
+											onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Francisco Mena
+								</td>
+								<td>
+									fmena@colegiosyseducativo.edu.co
+								</td>
+								<td>
+									3163861673
+								</td>
+								<td>
+									<div class="button-group">
+										<button class="button" type="button">Actualizar</button>
+										<button class="button" type="button"
+											onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Victor Mora Patiño
+								</td>
+								<td>
+									vmora@colegiosyseducativo.edu.co
+								</td>
+								<td>
+									3454545
+								</td>
+								<td>
+									<div class="button-group">
+										<button class="button" type="button">Actualizar</button>
+										<button class="button" type="button"
+											onclick="if (!confirm('¿Desea desActivar este registro?')) {return false};">Desactivar</button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="modal" id="modal-profesores">
+					<div class="modal-body">
+						<span class="modal-close">&times</span>
+						<h1 class="text-center">Nuevo Profesor</h1>
+						<form action="#">
+							<div class="field">
+								<label for="nombrep">Nombre</label>
+								<input type="text" id="nombrep" name="nombrep" required minlength="4" maxlength="80"
+									size="100">
+							</div>
+							<div class="field">
+								<label for="correop">Correo</label>
+								<input type="text" id="correop" name="correop" required minlength="4" maxlength="60"
+									size="80">
+							</div>
+							<div class="field">
+								<label for="telefonop">Telefono</label>
+								<input type="number" id="telefonop" name="telefonop" required minlength="9"
+									maxlength="15" size="15">
+							</div>
+							<div class="button-group">
+								<button type="button" class="button"
+									onclick="if (!confirm('¿Esta seguro de Guardar este registro?')) {return false};">Guardar</button>
+
+								<button type="button" class="button">Cancelar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+
+
+			</section>
+		</main>
+		<footer class="footer">
+			<p>Todos los derechos reservador &copy; 2021 - SysEducativo</p>
+		</footer>
+	</div>
+
+
+	<script src="../../js/global.js"></script>
+	<script src="../../js/dashboard.js"></script>
+</body>
+
+</html>

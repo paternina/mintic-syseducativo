@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materias</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <div class="toggle" data-target="aside-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="brand">
+                    SysEducativo
+                </div>
+                <span class="search">
+                    <input type="text" placeholder="Search">
+                </span>
+            </div>
+
+            <div class="navbar-right">
+                <div class="dropdown">
+                    <a class="dropdown-trigger" data-target="user-dropdown">Username <span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="user-dropdown">
+                        <li><a href="#">Perfil</a></li>
+                        <li><a href="#">Configuración</a></li>
+                        <li><a href="#">Salir</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <aside id="aside-menu" class="menu">
+            <p class="menu-label">General</p>
+            <ul class="menu-list">
+                <li class="menu-item"><a href="../index.html">Dashboard</a></li>
+                <li class="menu-item"><a href="../materias/index.html">Materias</a></li>
+                <li class="menu-item"><a href="../users/index.html">Usuarios</a></li>
+            </ul>
+            <p class="menu-label">Adiministración</p>
+            <ul class="menu-list">
+                <li class="menu-item"><a href="../profesores/index.html">Profesores</a></li>
+                <li class="menu-item"><a href="../alumnos/index.html">Estudiantes</a></li>
+                <li class="menu-item"><a href="../pagos/index.html">Pagos</a></li>
+                <li class="menu-item"><a href="../certificados/index.html">Certificados</a></li>
+            </ul>
+            <p class="menu-label">Reportes</p>
+            <ul class="menu-list">
+                <li class="menu-item"><a href="../notas/index.html">Notas</a></li>
+                <li class="menu-item"><a href="../profesores/notasxprofesores.html">Rendimiento</a></li>
+            </ul>
+            <p class="menu-label">
+                Configuración
+            </p>
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <label id="switch" class="switch">
+                        <input type="checkbox" onchange="toggleTheme()" id="slider">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+            </ul>
+        </aside>
+        <main class="main">
+            <section class="section">
+                <h2>Malla curricular de materias </h2><br>
+                <!--<select id="malla" name="malla">-->
+                <h3>Plan de estudios</h3>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre de la materia</th>
+                                <th>Grado 6°</th>
+                                <th>Grado 7°</th>
+                                <th>Grado 8°</th>
+                                <th>Grado 9°</th>
+                                <th>Grado 10°</th>
+                                <th>Grado 11°</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Matemáticas</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            <tr>
+                                <td>Algebra</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Trigonometria</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Si</td>
+                                <td>No</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Calculo basico</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Si</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ciencias naturales</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Biologia</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Fisica</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Quimica</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ciencias Sociales</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Educacion Religiosa</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Filososfia</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Educacion Fisica</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tecnologia e Informatica</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Educacion Artisitca</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Educacion etica y V.H</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>Si</td>
+                                <td>
+                                    <div class="button-group">
+                                        <button class="button">Actualizar</button>
+                                        <button class="button">Activar</button>
+                                        <button class="button">Desactivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <label for="guias">Guias didacticas por materia : </label><br>
+                <!--<select id="guias" name="guias">-->
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Grado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Docente 6°</td>
+                                <td><button class="button">Actualizar</td></button>
+                            </tr>
+                            <tr>
+                                <td>Docente 7°</td>
+                                <td><button class="button">Actualizar</td></button>
+                            </tr>
+                            <tr>
+                                <td>Docente 8°</td>
+                                <td><button class="button">Actualizar</td></button>
+                            </tr>
+                            <tr>
+                                <td>Docente 9°</td>
+                                <td><button class="button">Actualizar</td></button>
+                            </tr>
+                            <tr>
+                                <td>Docente 10°</td>
+                                <td><button class="button">Actualizar</td></button>
+                            </tr>
+                            <tr>
+                                <td>Docente 11°</td>
+                                <td><button class="button">Actualizar</td></button>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>Todos los derechos reservador &copy; 2021 - SysEducativo</p>
+        </footer>
+    </div>
+
+    <script src="../../js/global.js"></script>
+    <script src="../../js/dashboard.js"></script>
+</body>
+
+</html>

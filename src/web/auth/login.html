@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SysEducativo</title>
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <figure class="logo">
+      <img src="../assets/logo.png" alt="SysEducativo Logo">
+    </figure>
+    <section class="login-form">
+      <h1 class="title">Inicio de Sesión</h1>
+      <form id="login-form" method="POST">
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="username" />
+        </div>
+        <div class="field">
+          <label for="password">Contraseña</label>
+          <input type="password" name="password" id="password" placeholder="********" />
+        </div>
+        <span class="error"></span>
+        <div class="field">
+          <div class="button-group">
+            <input id="login-btn" type="submit" value="Iniciar Sesión" />
+            <a class="button-default" href="../index.html">Cancelar</a>
+          </div>
+
+        </div>
+      </form>
+    </section>
+  </div>
+  <script src="../js/global.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+
+</html>
