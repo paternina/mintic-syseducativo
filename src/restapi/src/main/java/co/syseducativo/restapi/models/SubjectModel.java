@@ -26,5 +26,11 @@ public class SubjectModel { // Clase Materias
     private String name;
     @Column(name = "is_active", columnDefinition = "Boolean default true")
     private boolean isActive = true;
+    @ManyToMany
+    private ArrayList<CourseModel> courses;
+    @OneToOne
+    private NoteModel note
+    @OneToMany
+    private ArrayList<TeacherModel> teachers;
 
 }

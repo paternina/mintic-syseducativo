@@ -25,7 +25,11 @@ public class CourseModel {
     private Long id;
 
     private String name;
+
+    @ManyToMany
     private ArrayList<SubjectModel> subjects;
+    @OneToMany
+    private ArrayList<StudentModel> students;
     @Column(name = "is_active", columnDefinition = "Boolean default true")
     private boolean isActive = true;
 

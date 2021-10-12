@@ -32,5 +32,13 @@ public class StudentModel {
     private CourseModel course;
     @Column(name = "is_active", columnDefinition = "Boolean default true")
     private boolean isActive = true;
+    @OneToOne
+    private NoteModel note;
+    @ManyToMany
+    private ArrayList<TeacherModel> teachers;
+    @OneToOne
+    private CourseModel course;
+
+
 
 }

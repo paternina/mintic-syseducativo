@@ -27,8 +27,15 @@ public class TeacherModel {
     private String email;
     private String telefono;
     private String direccion;
+    @OneToMany
     private ArrayList<SubjectModel> subjects;
     @Column(name = "is_active", columnDefinition = "Boolean default true")
     private boolean isActive = true;
+    @OneToOne
+    private NoteModel note;
+    @ManyToMany
+    private ArrayList<EstudentModel> Students;
+    @OneToOne
+    private CoordinatorModel coordinator;
 
 }
