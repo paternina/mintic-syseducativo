@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -28,7 +29,6 @@ public class TeacherModel {
     private String telefono;
     private String direccion;
     private ArrayList<SubjectModel> subjects;
-    private ArrayList<CourseModel> courses;
     @Column(name = "is_active", columnDefinition = "Boolean default true")
     private boolean isActive = true;
 

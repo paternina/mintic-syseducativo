@@ -21,7 +21,7 @@ public class SubjectController {
     SubjectService subjectService;
 
     @GetMapping()
-    public ArrayList<SubjectModel> getSubjects() {
+    public ArrayList<SubjectModel> obtenerMaterias() {
         return subjectService.getSubjects();
     }
 
