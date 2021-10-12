@@ -27,6 +27,6 @@ public class CoordinatorModel {
     private String direccion;
     @Column(name = "is_active", columnDefinition = "Boolean default true")
     private boolean isActive = true;
-    OneToMany
+    @OneToMany
     private ArrayList<TeacherModel> teachers;
 }
