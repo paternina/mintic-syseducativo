@@ -1,10 +1,15 @@
 package co.syseducativo.restapi.models;
 
+import java.util.ArrayList;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -29,7 +34,7 @@ public class SubjectModel { // Clase Materias
     @ManyToMany
     private ArrayList<CourseModel> courses;
     @OneToOne
-    private NoteModel note
+    private NoteModel note;
     @OneToMany
     private ArrayList<TeacherModel> teachers;
 

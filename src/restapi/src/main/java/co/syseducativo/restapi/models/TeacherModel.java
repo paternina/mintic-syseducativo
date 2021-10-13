@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -34,7 +37,7 @@ public class TeacherModel {
     @OneToOne
     private NoteModel note;
     @ManyToMany
-    private ArrayList<EstudentModel> Students;
+    private ArrayList<StudentModel> students;
     @OneToOne
     private CoordinatorModel coordinator;
 
