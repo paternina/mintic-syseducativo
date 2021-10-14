@@ -1,6 +1,7 @@
 package co.syseducativo.restapi.models;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -11,7 +12,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -37,9 +37,9 @@ public class StudentModel {
     @Column(name = "is_active", columnDefinition = "Boolean default true")
     private boolean isActive = true;
     @ManyToMany
-    private NoteModel note;
+    private Collection<NoteModel> notes = new ArrayList<>();
     @ManyToMany
-    private ArrayList<TeacherModel> teachers;
+    private Collection<TeacherModel> teachers = new ArrayList<>();
 
 
 }

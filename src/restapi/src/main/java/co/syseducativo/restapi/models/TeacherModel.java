@@ -1,6 +1,7 @@
 package co.syseducativo.restapi.models;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,13 +32,13 @@ public class TeacherModel {
     private String telefono;
     private String direccion;
     @OneToMany
-    private ArrayList<SubjectModel> subjects;
+    private Collection<SubjectModel> subjects = new ArrayList<>();
     @Column(name = "is_active", columnDefinition = "Boolean default true")
     private boolean isActive = true;
     @OneToOne
     private NoteModel note;
     @ManyToMany
-    private ArrayList<StudentModel> students;
+    private Collection<StudentModel> students = new ArrayList<>();
     @OneToOne
     private CoordinatorModel coordinator;
 

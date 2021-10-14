@@ -1,6 +1,7 @@
 package co.syseducativo.restapi.models;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,5 +32,5 @@ public class CoordinatorModel {
     @Column(name = "is_active", columnDefinition = "Boolean default true")
     private boolean isActive = true;
     @OneToMany
-    private ArrayList<TeacherModel> teachers;
+    private Collection<TeacherModel> teachers = new ArrayList<>();
 }
