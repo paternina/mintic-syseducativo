@@ -38,6 +38,7 @@ function login(event) {
                     window.localStorage.setItem("access_token", res["access_token"])
                     window.localStorage.setItem("refresh_token", res["refresh_token"])
                     console.log("Log in successfully")
+                    window.location = "/src/web/dashboard/index.html"
                 } else {
                     console.error("Log in failed")
                     _$(".error").innerHTML = res["errorMessage"]
@@ -46,8 +47,16 @@ function login(event) {
             .catch(error => console.log('error', error));
 
     } else {
-        _$(".error").innerHTML = "No se pueden enviar datos incorrectos"
+        _$(".error").innerHTML = "Rellene los campos requeridos"
     }
 
 
 }
+
+// Immediately invoked function to set the theme on initial load
+(function () {
+    if (localStorage.getItem('access_token') !== null) {
+        // Redirect to dashboard if access_token exists
+        window.location = "/src/web/dashboard/index.html"
+    }
+})();

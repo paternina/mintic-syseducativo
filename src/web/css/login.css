@@ -20,8 +20,10 @@
 }
 
 .error {
+    color: #e74c3c;
+    font-size: 12px;
     padding-bottom: 1rem;
-    color: var(--danger);
+    padding-top: -1rem;
 }
 
 @media screen and (min-width: 768px) {

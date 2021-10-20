@@ -49,4 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // logout button
+    let salir = document.querySelector("#logout")
+    if (salir) {
+        salir.addEventListener('click', handleLogout)
+    }
+
 });
+
+
+function handleLogout(e) {
+    e.preventDefault()
+    localStorage.removeItem('access_token')
+    localStorage.removeItem('refresh_token')
+    // reload as we have already defined the login/logout redirect behavior
+    location.reload()
+}

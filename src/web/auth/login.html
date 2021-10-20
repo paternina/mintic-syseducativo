@@ -20,13 +20,13 @@
       <form id="login-form" method="POST">
         <div class="field">
           <label for="username">Username</label>
-          <input type="text" name="username" id="username" placeholder="username" />
+          <input type="text" name="username" id="username" placeholder="username" required />
         </div>
         <div class="field">
           <label for="password">Contraseña</label>
-          <input type="password" name="password" id="password" placeholder="********" />
+          <input type="password" name="password" id="password" placeholder="********" required />
         </div>
-        <span class="error"></span>
+        <p class="error"></p>
         <div class="field">
           <div class="button-group">
             <input id="login-btn" type="submit" value="Iniciar Sesión" />
