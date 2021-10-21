@@ -36,6 +36,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
+//Listar Materias
+function listarMaterias(e) {
+    e.preventDefault()
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", "Bearer " + localStorage.getItem('access_token'));
+    var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
+
+    fetch("http://localhost:8080/api/v1/subjects", requestOptions)
+        .then(response => response.text())
+        .then(result => {
+            let data = JSON.parse(result)
+            let materiaBody = document.getElementById('materia-body')
+            data.forEach(element => {
+                materiaBody.innerHTML += `
+                <tr>
+                    <td>${element.id}</td>
+                    <td>${element.name}</td>
+                </tr>
+                `;
+            });
+        })
+        .catch(error => console.log('error', error));
+}
+
 // Crear materia
 function crearMateria(e) {
     e.preventDefault()
