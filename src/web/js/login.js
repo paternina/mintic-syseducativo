@@ -57,6 +57,6 @@ function login(event) {
 (function () {
     if (localStorage.getItem('access_token') !== null) {
         // Redirect to dashboard if access_token exists
-        window.location = "/src/web/dashboard/index.html"
+        window.location = "/dashboard/index.html"
     }
 })();

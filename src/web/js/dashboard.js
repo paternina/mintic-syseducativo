@@ -25,6 +25,6 @@ function toggleTheme() {
 
     if (localStorage.getItem('access_token') === null) {
         // Redirect to login if not access_token
-        window.location = "/src/web/auth/login.html"
+        window.location = "/auth/login.html"
     }
 })();
