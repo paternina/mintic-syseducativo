@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (formularioMateria) {
         formularioMateria.addEventListener('submit', crearMateria)
     }
+    listarMaterias()
 })
 
 //Listar Materias
-function listarMaterias(e) {
-    e.preventDefault()
+function listarMaterias() {
     var myHeaders = new Headers();
     myHeaders.append("Authorization", "Bearer " + localStorage.getItem('access_token'));
     var requestOptions = {
@@ -47,20 +47,9 @@ function listarMaterias(e) {
         redirect: 'follow'
     };
 
-    fetch("http://localhost:8080/api/v1/subjects", requestOptions)
-        .then(response => response.text())
-        .then(result => {
-            let data = JSON.parse(result)
-            let materiaBody = document.getElementById('materia-body')
-            data.forEach(element => {
-                materiaBody.innerHTML += `
-                <tr>
-                    <td>${element.id}</td>
-                    <td>${element.name}</td>
-                </tr>
-                `;
-            });
-        })
+    fetch("http://localhost:8080/api/v1/materia", requestOptions)
+        .then(response => response.json())
+        .then(result => { console.log(result) })
         .catch(error => console.log('error', error));
 }
 
@@ -82,7 +71,7 @@ function crearMateria(e) {
         redirect: 'follow'
     };
 
-    fetch("http://localhost:8080/api/v1/subjects", requestOptions)
+    fetch("http://localhost:8080/api/v1/materia", requestOptions)
         .then(response => response.text())
         .then(result => JSON.parse(result))
         .catch(error => console.log('error', error));
