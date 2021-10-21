@@ -18,6 +18,8 @@ function login(event) {
     if (username !== "" && password !== "") {
         let myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+        //myHeaders.append("Content-Type", "application/json");
+        //myHeaders.append("Authorization", `Bearer ${localStorage.getItem('access_token')}`);
 
         let urlencoded = new URLSearchParams();
         urlencoded.append("username", username);
@@ -49,8 +51,6 @@ function login(event) {
     } else {
         _$(".error").innerHTML = "Rellene los campos requeridos"
     }
-
-
 }
 
 // Immediately invoked function to set the theme on initial load
