@@ -40,7 +40,7 @@ function login(event) {
                     window.localStorage.setItem("access_token", res["access_token"])
                     window.localStorage.setItem("refresh_token", res["refresh_token"])
                     console.log("Log in successfully")
-                    window.location = "/src/web/dashboard/index.html"
+                    window.location = "/dashboard/index.html"
                 } else {
                     console.error("Log in failed")
                     _$(".error").innerHTML = res["errorMessage"]
