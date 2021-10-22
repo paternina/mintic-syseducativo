@@ -22,11 +22,6 @@ function toggleTheme() {
         setTheme('theme-light');
         document.getElementById('slider').checked = true;
     }
-
-    if (localStorage.getItem('access_token') === null) {
-        // Redirect to login if not access_token
-        window.location = "/auth/login.html"
-    }
 })();
 
 document.addEventListener('DOMContentLoaded', () => {

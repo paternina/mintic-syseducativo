@@ -52,11 +52,3 @@ function login(event) {
         _$(".error").innerHTML = "Rellene los campos requeridos"
     }
 }
-
-// Immediately invoked function to set the theme on initial load
-(function () {
-    if (localStorage.getItem('access_token') !== null) {
-        // Redirect to dashboard if access_token exists
-        window.location = "/dashboard/index.html"
-    }
-})();
