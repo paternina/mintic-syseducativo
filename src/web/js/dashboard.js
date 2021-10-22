@@ -24,11 +24,5 @@ function toggleTheme() {
     }
 })();
 
-document.addEventListener('DOMContentLoaded', () => {
-    let formularioMateria = document.getElementById('materia-formulario')
-    if (formularioMateria) {
-        formularioMateria.addEventListener('submit', crearMateria)
-    }
-    listarMaterias()
-})
+
 

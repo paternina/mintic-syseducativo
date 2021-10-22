@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', () => {
+    let formularioMateria = document.getElementById('materia-formulario')
+    if (formularioMateria) {
+        formularioMateria.addEventListener('submit', crearMateria)
+    }
+    listarMaterias()
+})
+
 //Listar Materias
 function listarMaterias() {
     var myHeaders = new Headers();
