@@ -530,4 +530,14 @@ form .field input:focus, form .field select:focus  {
       width: 80%;
       margin: auto;
     }
+	 
+	.open-modal {
+		font-weight: bold;
+		background: var(--blue);
+		color: var(--white);
+		padding: .75rem 1.75rem;
+		margin-bottom: 1rem;
+		border-radius: 5px;
+	}
+
 }

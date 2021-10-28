@@ -150,6 +150,12 @@
 						</tbody>
 					</table>
 				</div>
+				
+				
+				<button class="open-modal" type="button"
+				data-open="modal-profesores">Nuevo</button>
+				
+				
 
 				<div class="modal" id="modal-profesores">
 					<div class="modal-body">
@@ -175,7 +181,7 @@
 								<button type="button" class="button"
 									onclick="if (!confirm('¿Esta seguro de Guardar este registro?')) {return false};">Guardar</button>
 
-								<button type="button" class="button">Cancelar</button>
+								<button class="close-modal" aria-label="close modal" data-close>Cancelar</button>
 							</div>
 						</form>
 					</div>
