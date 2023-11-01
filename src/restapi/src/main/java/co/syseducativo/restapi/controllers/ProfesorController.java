@@ -24,12 +24,12 @@ public class ProfesorController {
     ProfesorService profesorService;
 
     @GetMapping(path = "/{id}")
-    public Optional<Profesor> getById(@PathVariable("id") Integer id) {
+    public Optional<Profesor> getById(@PathVariable Integer id) {
         return profesorService.getById(id);
     }
 
     @GetMapping()
-    public ArrayList<Profesor> getAllProfesors(@RequestParam(value = "isActive", required = false) Boolean isActive) {
+    public ArrayList<Profesor> getAllProfesors(@RequestParam(required = false) Boolean isActive) {
         if (isActive != null) {
             return profesorService.getAllByIsActive(isActive);
         }

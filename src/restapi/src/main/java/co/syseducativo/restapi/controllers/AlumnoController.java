@@ -24,12 +24,12 @@ public class AlumnoController {
     AlumnoService alumnoService;
 
     @GetMapping(path = "/{id}")
-    public Optional<Alumno> getById(@PathVariable("id") Integer id) {
+    public Optional<Alumno> getById(@PathVariable Integer id) {
         return alumnoService.getById(id);
     }
 
     @GetMapping()
-    public ArrayList<Alumno> getAllAlumnos(@RequestParam(value = "isActive", required = false) Boolean isActive) {
+    public ArrayList<Alumno> getAllAlumnos(@RequestParam(required = false) Boolean isActive) {
         if (isActive != null) {
             return alumnoService.getAllByIsActive(isActive);
         }

@@ -33,7 +33,7 @@ public class SubjectController {
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<SubjectModel> getById(@PathVariable("id") Long id) {
+    public Optional<SubjectModel> getById(@PathVariable Long id) {
         return subjectService.getById(id);
     }
 

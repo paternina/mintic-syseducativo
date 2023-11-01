@@ -33,7 +33,7 @@ public class NoteController {
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<NoteModel> getById(@PathVariable("id") Long id) {
+    public Optional<NoteModel> getById(@PathVariable Long id) {
         return noteService.getById(id);
     }
 }

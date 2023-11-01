@@ -33,7 +33,7 @@ public class CoordinatorController {
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<CoordinatorModel> getById(@PathVariable("id") Long id) {
+    public Optional<CoordinatorModel> getById(@PathVariable Long id) {
         return coordinatorService.getById(id);
     }
 

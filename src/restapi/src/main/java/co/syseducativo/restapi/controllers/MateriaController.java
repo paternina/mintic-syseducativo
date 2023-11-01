@@ -24,12 +24,12 @@ public class MateriaController {
     MateriaService materiaService;
 
     @GetMapping(path = "/{id}")
-    public Optional<Materia> getById(@PathVariable("id") Integer id) {
+    public Optional<Materia> getById(@PathVariable Integer id) {
         return materiaService.getById(id);
     }
 
     @GetMapping()
-    public ArrayList<Materia> getAllMaterias(@RequestParam(value = "isActive", required = false) Boolean isActive) {
+    public ArrayList<Materia> getAllMaterias(@RequestParam(required = false) Boolean isActive) {
         if (isActive != null) {
             return materiaService.getAllByIsActive(isActive);
         }

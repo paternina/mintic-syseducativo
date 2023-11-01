@@ -72,7 +72,7 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
         @Override
         protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response,
                         AuthenticationException failed) throws IOException, ServletException {
-                // TODO Auto-generated method stub
+
                 Map<String, String> errores = new HashMap<>();
                 errores.put("errorMessage", "Credenciales invalidas");
                 response.setStatus(HttpStatus.UNAUTHORIZED.value());

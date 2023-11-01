@@ -24,7 +24,7 @@ public class PagoMatriculaController {
     PagoMatriculaService pagoMatriculaService;
 
     @GetMapping(path = "/{id}")
-    public Optional<PagoMatricula> getById(@PathVariable("id") Integer id) {
+    public Optional<PagoMatricula> getById(@PathVariable Integer id) {
         return pagoMatriculaService.getById(id);
     }
 

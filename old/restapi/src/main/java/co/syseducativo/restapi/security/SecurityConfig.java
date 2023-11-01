@@ -3,6 +3,8 @@ package co.syseducativo.restapi.security;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import static org.springframework.security.config.Customizer.withDefaults;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -41,11 +43,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         CustomAuthenticationFilter customAuthenticationFilter = new CustomAuthenticationFilter(
                 authenticationManagerBean());
         customAuthenticationFilter.setFilterProcessesUrl("/api/auth/token/new");
-        http.cors().and().csrf().disable().authorizeRequests();
-        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.authorizeRequests().antMatchers("/api/auth/token/**").permitAll();
-        http.authorizeRequests().antMatchers("/api/user/new").hasAnyAuthority("ADMIN");
-        http.authorizeRequests().anyRequest().authenticated();
+        http.cors(withDefaults()).csrf(csrf -> csrf.disable()).authorizeRequests(withDefaults());
+        http.sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+        http.authorizeRequests(requests -> requests.antMatchers("/api/auth/token/**").permitAll());
+        http.authorizeRequests(requests -> requests.antMatchers("/api/user/new").hasAnyAuthority("ADMIN"));
+        http.authorizeRequests(requests -> requests.anyRequest().authenticated());
         http.addFilter(customAuthenticationFilter);
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
     }

@@ -33,7 +33,7 @@ public class TeacherController {
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<TeacherModel> getById(@PathVariable("id") Long id) {
+    public Optional<TeacherModel> getById(@PathVariable Long id) {
         return teacherService.getById(id);
     }
 }

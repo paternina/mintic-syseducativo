@@ -24,13 +24,13 @@ public class CoordinadorController {
     CoordinadorService coordinadorService;
 
     @GetMapping(path = "/{id}")
-    public Optional<Coordinador> getById(@PathVariable("id") Integer id) {
+    public Optional<Coordinador> getById(@PathVariable Integer id) {
         return coordinadorService.getById(id);
     }
 
     @GetMapping()
     public ArrayList<Coordinador> getAllCoordinadors(
-            @RequestParam(value = "isActive", required = false) Boolean isActive) {
+            @RequestParam(required = false) Boolean isActive) {
         if (isActive != null) {
             return coordinadorService.getAllByIsActive(isActive);
         }

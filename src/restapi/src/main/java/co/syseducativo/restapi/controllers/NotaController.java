@@ -24,12 +24,12 @@ public class NotaController {
     NotaService notaService;
 
     @GetMapping(path = "/{id}")
-    public Optional<Nota> getById(@PathVariable("id") Integer id) {
+    public Optional<Nota> getById(@PathVariable Integer id) {
         return notaService.getById(id);
     }
 
     @GetMapping()
-    public ArrayList<Nota> getAllNotas(@RequestParam(value = "isActive", required = false) Boolean isActive) {
+    public ArrayList<Nota> getAllNotas(@RequestParam(required = false) Boolean isActive) {
         if (isActive != null) {
             return notaService.getAllByIsActive(isActive);
         }

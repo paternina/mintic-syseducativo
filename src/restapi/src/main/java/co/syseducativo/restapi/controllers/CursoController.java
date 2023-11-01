@@ -24,12 +24,12 @@ public class CursoController {
     CursoService cursoService;
 
     @GetMapping(path = "/{id}")
-    public Optional<Curso> getById(@PathVariable("id") Integer id) {
+    public Optional<Curso> getById(@PathVariable Integer id) {
         return cursoService.getById(id);
     }
 
     @GetMapping()
-    public ArrayList<Curso> getAllCursos(@RequestParam(value = "isActive", required = false) Boolean isActive) {
+    public ArrayList<Curso> getAllCursos(@RequestParam(required = false) Boolean isActive) {
         if (isActive != null) {
             return cursoService.getAllByIsActive(isActive);
         }
